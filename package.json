@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "node src/index.js",
-    "go" : "nodemon src/index.js",
+    "start": "node src/index.js",
+    "go": "nodemon src/index.js",
     "test": "jest"
   },
   "repository": {
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "jest": "^24.8.0",
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.0",
+    "supertest": "^4.0.2"
   }
 }
