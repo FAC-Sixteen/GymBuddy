@@ -1,0 +1,4 @@
+.auto-grid {
+    @include grid;
+    @include gridAuto(260px);
+};

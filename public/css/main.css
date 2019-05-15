@@ -12,5 +12,13 @@
   --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
   --heading-line-height: 1.2;
   --body-line-height: 1.4;
+  --yellow: #FFD600;
+  --pink: #FEEFEA;
+  --orange:  #F8C537;
+  --grey: #C4C4C4;
+  --grey-light: #E5E5E5;
+  --green: #88c459;
+  --red: #f94747;
+  --yellow: #ffd137;
 }
 /*# sourceMappingURL=main.css.map */
