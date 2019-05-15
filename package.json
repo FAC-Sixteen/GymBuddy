@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node src/index.js",
     "go": "nodemon src/index.js",
-    "test": "jest"
+    "test": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
     "bcrypt": "^3.0.6",
     "env2": "^2.2.2",
     "express": "^4.16.4",
+    "express-handlebars": "^3.1.0",
     "pg": "^7.11.0",
     "qs": "^6.7.0"
   },
