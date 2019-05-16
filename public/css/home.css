@@ -13,3 +13,7 @@ body {
 #find_buddy_button {
     display: none;
 }
+
+button {
+  border:none;
+}
