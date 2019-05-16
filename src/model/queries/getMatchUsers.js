@@ -48,7 +48,7 @@ const completeUserData = (
   timeID
 ) => {
   let resultArr = [];
-
+  console.log(resultArr);
   let matchedUser = returnMatchedUsers(age, gender, location, experience);
   matchedUser.then(result =>
     setTimeout(() => {
@@ -69,10 +69,28 @@ const completeUserData = (
 
   Promise.all(resultArr).then(value => {
     mapData(value);
+    // console.log(value);
   });
 };
 
 completeUserData(28, "Male", "London", "Beginner", 2, 2);
+
+const mapData = value => {
+  let objOne = { ...value[0][0] };
+  let objTwo = { ...value[1] };
+  let objThree = { ...value[1][1] };
+  const { goals_id } = objTwo;
+
+  // console.log(value);
+  objOne.goals_id = [goals_id];
+
+  // const { goals_id } = objThree;
+  // objOne.goals_id[1] = [goals_id];
+
+  // console.log(objOne);
+  // console.log(objTwo);
+  // console.log(objThree);
+};
 
 module.exports = {
   getData,
