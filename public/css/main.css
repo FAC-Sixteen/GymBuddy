@@ -1,0 +1,34 @@
+:root {
+  --font-primary: 'Questrial';
+  --font-secondary: 'Coming Soon';
+  --text-base-size: 1em;
+  --text-scale-ratio: 1.2;
+  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1em / var(--text-scale-ratio));
+  --text-md: calc(1em * var(--text-scale-ratio));
+  --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --heading-line-height: 1.2;
+  --body-line-height: 1.4;
+  --yellow: #FFD600;
+  --pink: #FEEFEA;
+  --orange:  #F8C537;
+  --grey: #C4C4C4;
+  --grey-light: #E5E5E5;
+  --green: #88c459;
+  --red: #f94747;
+  --yellow: #ffd137;
+  --space-unit: 1em;
+  --space-xxxs: calc(0.25 * var(--space-unit));
+  --space-xxs:  calc(0.375 * var(--space-unit));
+  --space-xs:   calc(0.5 * var(--space-unit));
+  --space-sm:   calc(0.75 * var(--space-unit));
+  --space-md:   calc(1.25 * var(--space-unit));
+  --space-lg:   calc(2 * var(--space-unit));
+  --space-xl:   calc(3.25 * var(--space-unit));
+  --space-xxl:  calc(5.25 * var(--space-unit));
+  --space-xxxl: calc(8.5 * var(--space-unit));
+}
+/*# sourceMappingURL=main.css.map */
