@@ -1,0 +1,98 @@
+// --grids--
+// 1. auto-grid
+// 2. 2D grid
+
+$gap-horizontal: 10px;
+$gap-vertical: $gap-horizontal;
+
+@mixin grid {
+  // fallback for IE
+  &::before, &::after {
+    content: '';
+    display: table;
+  }
+  
+  &::after {
+    clear: both;
+  }
+
+  > * {
+    float: left;
+    margin-right: $gap-horizontal;
+    margin-bottom: $gap-vertical;
+  }
+  
+  @supports(grid-area: auto) {
+    //CSS Grid style
+    display: grid;
+    grid-column-gap: $gap-horizontal;
+    grid-row-gap: $gap-vertical;
+    
+    &::after, &::before {
+      content: none;
+    }
+    
+    > * {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+};
+
+@mixin gridLayout($cols...) {
+    @supports(grid-area: auto) {
+      grid-template-columns: repeat($grid-columns, 1fr);
+  
+      $i: 1;
+      @each $col in $cols {
+        > :nth-of-type(#{$i}) {
+          grid-column-end: span nth($col,1);
+          @if length($col) > 1 {
+            grid-row-end: span nth($col,2);
+          }
+        }
+        $i: $i + 1;
+      }
+    }
+};
+
+@mixin gridAuto($min-width, $fallback: 3) {
+    > * {
+      float: left;
+      width: calc(100%/#{$fallback} - #{$gap-horizontal});
+    
+      &:nth-child(#{$fallback}n + 1) {
+        clear: both;
+      }
+    }
+  
+    @supports(grid-area: auto) {
+      grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+      
+      > * {
+        width: auto;
+        margin: 0;
+      }
+    }
+};
+
+
+
+    // 1.
+.auto-grid {
+    @include grid;
+    @include gridAuto(260px);
+};
+
+    // 2.
+.two-dem-grid {
+    @include gridLayout(
+      (12, 1), //item 1 | These
+      (5, 1), //item 2 | are
+      (5, 1), //item 3 | dummy
+      (12, 1) //item 4 | values
+    );
+  }
+
+
+

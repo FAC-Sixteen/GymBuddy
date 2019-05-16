@@ -1,0 +1,68 @@
+:root {
+//typography
+
+    // font vars
+    --font-primary: 'Questrial';
+    --font-secondary: 'Coming Soon';
+
+        // base values
+    --text-base-size: 1em;
+    --text-scale-ratio: 1.2;
+
+        // type scale
+    --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --text-sm: calc(1em / var(--text-scale-ratio));
+    --text-md: calc(1em * var(--text-scale-ratio));
+    --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+        // line-height variables
+    --heading-line-height: 1.2;
+    --body-line-height: 1.4;
+
+//color (look at chrome.js to generate shades 
+
+        // color vars
+    --yellow: #FFD600;
+    --pink: #FEEFEA;
+    --orange:  #F8C537;
+    --grey: #C4C4C4;
+    --grey-light: #E5E5E5;
+    
+
+        //feedback colors
+    --green: #88c459;
+    --red: #f94747;
+    --yellow: #ffd137;
+
+    //  typography
+
+    //  border
+
+    //  body
+
+    //  forms
+
+    //  buttons
+    --btn-font-size: 1em;
+    --btn-radius: 0.75em;
+
+    //  icons
+
+    
+// spacing 
+
+        // spacing vars
+    --space-unit: 1em;
+    --space-xxxs: calc(0.25 * var(--space-unit));
+    --space-xxs:  calc(0.375 * var(--space-unit));
+    --space-xs:   calc(0.5 * var(--space-unit));
+    --space-sm:   calc(0.75 * var(--space-unit));
+    --space-md:   calc(1.25 * var(--space-unit));
+    --space-lg:   calc(2 * var(--space-unit));
+    --space-xl:   calc(3.25 * var(--space-unit));
+    --space-xxl:  calc(5.25 * var(--space-unit));
+    --space-xxxl: calc(8.5 * var(--space-unit));
+};

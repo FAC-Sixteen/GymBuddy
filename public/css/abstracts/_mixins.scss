@@ -1,0 +1,74 @@
+$gap-horizontal: 10px;
+$gap-vertical: $gap-horizontal;
+$grid-columns: 12;
+
+@mixin grid {
+  // fallback for IE
+  &::before, &::after {
+    content: '';
+    display: table;
+  }
+  
+  &::after {
+    clear: both;
+  }
+
+  > * {
+    float: left;
+    margin-right: $gap-horizontal;
+    margin-bottom: $gap-vertical;
+  }
+  
+  @supports(grid-area: auto) {
+    //CSS Grid style
+    display: grid;
+    grid-column-gap: $gap-horizontal;
+    grid-row-gap: $gap-vertical;
+    
+    &::after, &::before {
+      content: none;
+    }
+    
+    > * {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+};
+
+@mixin gridLayout($cols...) {
+    @supports(grid-area: auto) {
+      grid-template-columns: repeat($grid-columns, 1fr);
+  
+      $i: 1;
+      @each $col in $cols {
+        > :nth-of-type(#{$i}) {
+          grid-column-end: span nth($col,1);
+          @if length($col) > 1 {
+            grid-row-end: span nth($col,2);
+          }
+        }
+        $i: $i + 1;
+      }
+    }
+};
+
+@mixin gridAuto($min-width, $fallback: 3) {
+    > * {
+      float: left;
+      width: calc(100%/#{$fallback} - #{$gap-horizontal});
+    
+      &:nth-child(#{$fallback}n + 1) {
+        clear: both;
+      }
+    }
+  
+    @supports(grid-area: auto) {
+      grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+      
+      > * {
+        width: auto;
+        margin: 0;
+      }
+    }
+};
