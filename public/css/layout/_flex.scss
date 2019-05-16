@@ -1,0 +1,11 @@
+// insert flex layout
+
+.flex-body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid var(--pink);
+    // background-color: var(--pink);
+}

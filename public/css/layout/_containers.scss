@@ -1,0 +1,15 @@
+.container-content {
+    width: 25em;
+    border-radius: 0.25em;
+    border: 1px solid var(--pink);
+    background-color: var(--pink);
+}
+
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: var(--space-md);
+}
