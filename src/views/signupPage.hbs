@@ -1,6 +1,34 @@
-<form class="main-form" action="/submit" method="post">
-    
-<label for="input-name">name</label><br>
-<input type="text" name="name" value="" id="input-name" pattern="^[A-Za-z]+$" required><br>
+<section class="container-main">
+    <form class="form-main" action="/submit" method="post">   
 
-</form>
+    {{!-- page 1 --}}
+        <label for="input-name">name:<br><br>
+            <input  class="input-text" type="text" name="name" value="" id="input-name" pattern="^[A-Za-z]+$" required><br>
+        </label>
+
+        <label for="input-age">age:<br><br>
+            <input  class="input-text" type="text" name="name" value="" id="input-age" pattern="^[A-Za-z]+$" required><br>
+        </label>
+        <label for="input-gender">what best describes your gender:<br><br>
+        <section class="two-dem-grid">
+            <li class="btn__round-large">
+                <input type="radio" id="woman" name="amount" />
+                <label for="woman">woman</label>
+            </li>
+            <li class="btn__round-large">
+                <input type="radio" id="a50" name="amount" />
+                <label for="a50">man</label>
+            </li>
+            <li class="btn__round-large">
+                <input type="radio" id="a75" name="amount" checked="checked" />
+                <label for="a75">$75</label>
+            </li>
+            <li class="btn__round-large">
+                <input type="radio" id="a100" name="amount" />
+                <label for="a100">$100</label>
+            </li>          
+        </section>
+        </label>
+
+    </form>
+</section>
