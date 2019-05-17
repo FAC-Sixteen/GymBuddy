@@ -90,24 +90,24 @@ beforeEach(() => {
 //     .catch(err => console.log(err))
 // })
 
-test('testing the post data function returns user id', ()=> {
-    // expect(getData.getUser('users_name')).resolves.toStrictEqual(undefined)
-    // expect(getData.getAllUsers()).resolves.toStrictEqual(undefined)
-    // postData.postUserData('users_name', 21, 'gender', 'location', 'experience', 'photo')
-    // .then(response => postData.postUserGoals(response, 1))
-    // .catch(err => console.log(err))
+// test('testing the post data function returns user id', ()=> {
+//     // expect(getData.getUser('users_name')).resolves.toStrictEqual(undefined)
+//     // expect(getData.getAllUsers()).resolves.toStrictEqual(undefined)
+//     // postData.postUserData('users_name', 21, 'gender', 'location', 'experience', 'photo')
+//     // .then(response => postData.postUserGoals(response, 1))
+//     // .catch(err => console.log(err))
 
-    postData.postUserData('users_name', 21, 'gender', 'location', 'experience', 'photo')
-    .then(response => {
-        console.log('the postData response is', response)
-        const goals = [2, 3, 4]
-        goals.forEach(goal => {
-            postData.postUserGoals(response, goal)
-        })
-    })
-    .catch(err => console.log(err))
+//     postData.postUserData('users_name', 21, 'gender', 'location', 'experience', 'photo')
+//     .then(response => {
+//         console.log('the postData response is', response)
+//         const goals = [2, 3, 4]
+//         goals.forEach(goal => {
+//             postData.postUserGoals(response, goal)
+//         })
+//     })
+//     .catch(err => console.log(err))
     
-    // getData.getUserGoals(5)
-    // .then(response => expect(response).toBe('hello'))
-    // .catch(err => console.log(err))
-})
+//     // getData.getUserGoals(5)
+//     // .then(response => expect(response).toBe('hello'))
+//     // .catch(err => console.log(err))
+// })
