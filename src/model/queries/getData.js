@@ -7,13 +7,17 @@ const getAllUsers = () => {
 }
 
 const getUser = (name) => {
-    return dbConnection.query(`SELECT * FROM users WHERE users_name = '${name}'`)
-    .then(response => {return response.rows[0]})
-    .catch(err => console.log(err))
+    const query = `
+        SELECT * FROM users WHERE users_name = '${name}'
+        `
+
+    return dbConnection.query(query)
+        .then(response => {return response.rows[0]})
+        .catch(err => console.log(err))
 }
 
-const getUserGoals = (userId) => {
-    return dbConnection.query(`SELECT * FROM users_goals WHERE users_id = ${userId}`)
+const getUserGoals = () => {
+    return dbConnection.query(`SELECT * FROM users_goals`)
     .then(response => {return response.rows})
     .catch(err => console.log(err))
 }
