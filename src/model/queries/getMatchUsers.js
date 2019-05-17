@@ -65,14 +65,33 @@ const completeUserData = (
   userTime.then(result => result);
   resultArr.push(userTime);
 
-  // let promisesArray = [matchedUser, userGoal, userTime];
-
   Promise.all(resultArr).then(value => {
     mapData(value);
   });
 };
 
 completeUserData(28, "Male", "London", "Beginner", 2, 2);
+
+const sortObj = (obj = "{ users_id: 2, goals_id: '' }") => {
+  const goal = obj.goals_id;
+  return goal;
+};
+
+const mapData = value => {
+  let objOne = { ...value[0][0] };
+  let goalsObjOne = { ...value[1][0] };
+  let goalsObjTwo = { ...value[1][1] };
+  let goalsObjThree = { ...value[1][2] };
+  let goalsObjFour = { ...value[1][3] };
+
+  const firstGoal = sortObj(goalsObjOne);
+  const secondGoal = sortObj(goalsObjTwo);
+  const thirdGoal = sortObj(goalsObjThree);
+  const fourthGoal = sortObj(goalsObjFour);
+
+  objOne.goals_id = [firstGoal, secondGoal, thirdGoal, fourthGoal];
+  console.log(objOne);
+};
 
 module.exports = {
   getData,
