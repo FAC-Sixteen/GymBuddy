@@ -2,33 +2,130 @@
     <form class="form-main" action="/submit" method="post">   
 
     {{!-- page 1 --}}
-        <label for="input-name">name:<br><br>
-            <input  class="input-text" type="text" name="name" value="" id="input-name" pattern="^[A-Za-z]+$" required><br>
-        </label>
+        <div class="page-one">
+            <label for="input-name">name:<br><br>
+                <input  class="input-text" type="text" name="name" value="" id="input-name" pattern="^[A-Za-z]+$" required><br>
+            </label>
 
-        <label for="input-age">age:<br><br>
-            <input  class="input-text" type="text" name="name" value="" id="input-age" pattern="^[A-Za-z]+$" required><br>
-        </label>
-        <label for="input-gender">what best describes your gender:<br><br>
-        <section class="two-dem-grid">
-            <li class="btn__round-large">
-                <input type="radio" id="woman" name="amount" />
-                <label for="woman">woman</label>
-            </li>
-            <li class="btn__round-large">
-                <input type="radio" id="a50" name="amount" />
-                <label for="a50">man</label>
-            </li>
-            <li class="btn__round-large">
-                <input type="radio" id="a75" name="amount" checked="checked" />
-                <label for="a75">$75</label>
-            </li>
-            <li class="btn__round-large">
-                <input type="radio" id="a100" name="amount" />
-                <label for="a100">$100</label>
-            </li>          
-        </section>
-        </label>
+            <label for="input-age">age:<br><br>
+                <input  class="input-text" type="text" name="name" value="" id="input-age" pattern="^[A-Za-z]+$" required><br>
+            </label>
+            <label for="input-gender">what best describes your gender:<br><br> </label>
+            <section class="basic-grid">      
+                <div class="input-btn">
+                    <label for="woman">
+                        <input type="checkbox" id="woman" value="1"><span>woman</span>
+                    </label>
+                </div>
+                <div class="input-btn">
+                    <label for="man">
+                        <input type="checkbox" id="man" value="1"><span>man</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label >
+                        <input type="checkbox" value="1"><span>red</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label>
+                        <input type="checkbox" value="1"><span>red</span>
+                    </label>
+                </div>              
+            </section>
 
+            <div class="container-button">
+                <button class="btn__arrow-right">
+                    {{!-- <a href="/conduct-page"> --}}
+                        <img src="./assets/right-arrow.png" alt="arrow button to the right">
+                    {{!-- </a> --}}
+                </button>    
+            </div>
+
+        </div>
+
+        <div class="page-two">
+            <label for="input-gender">what time(s) work for you:<br><br> </label>
+            <section class="basic-grid">      
+                <div class="input-btn">
+                    <label for="morning">
+                        <input type="checkbox" id="morning" value="1"><span>morning</span>
+                    </label>
+                </div>
+                <div class="input-btn">
+                    <label for="afternoon">
+                        <input type="checkbox" id="afternoon" value="1"><span>afternoon</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="evening" >
+                        <input type="checkbox" id="evening" value="1"><span>evening</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="flexible">
+                        <input type="checkbox" id="flexible" value="1"><span>flexible</span>
+                    </label>
+                </div>              
+            </section>
+
+
+            {{!-- naughty me using brs for spacing -todo fixthis --}}
+            <label for="input-time"> <br>what experience level best describes you:<br><br> </label> 
+            <section class="basic-grid">      
+                <div class="input-btn">
+                    <label for="morning">
+                        <input type="checkbox" id="morning" value="1"><span>morning</span>
+                    </label>
+                </div>
+                <div class="input-btn">
+                    <label for="afternoon">
+                        <input type="checkbox" id="afternoon" value="1"><span>afternoon</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="evening" >
+                        <input type="checkbox" id="evening" value="1"><span>evening</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="flexible">
+                        <input type="checkbox" id="flexible" value="1"><span>flexible</span>
+                    </label>
+                </div>              
+            </section>
+
+            <label for="input-time"> <br>pick at least one goal:<br><br> </label> 
+            <section class="basic-grid">      
+                <div class="input-btn">
+                    <label for="morning">
+                        <input type="checkbox" id="morning" value="1"><span>morning</span>
+                    </label>
+                </div>
+                <div class="input-btn">
+                    <label for="afternoon">
+                        <input type="checkbox" id="afternoon" value="1"><span>afternoon</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="evening" >
+                        <input type="checkbox" id="evening" value="1"><span>evening</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="flexible">
+                        <input type="checkbox" id="flexible" value="1"><span>flexible</span>
+                    </label>
+                </div>              
+            </section>
+            <div class="container-button">
+                <button class="btn__arrow-right" onclick="openPage(event, 'page-two')">
+                    {{!-- <a href="/conduct-page"> --}}
+                        <img src="./assets/right-arrow.png" alt="arrow button to the right">
+                    {{!-- </a> --}}
+                </button>    
+            </div>
+        </div>
     </form>
+    <script src="scripts/signup.js"></script>
 </section>
