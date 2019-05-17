@@ -90,7 +90,13 @@ const mapData = value => {
   const fourthGoal = sortObj(goalsObjFour);
 
   objOne.goals_id = [firstGoal, secondGoal, thirdGoal, fourthGoal];
-  console.log(objOne);
+
+  const objTotalNumGoals = value[1].length;
+  console.log("first", objOne);
+  for (i = 0; i < objTotalNumGoals; i++) {
+    objOne.goals_id.pop();
+  }
+  console.log("second", objOne);
 };
 
 module.exports = {
