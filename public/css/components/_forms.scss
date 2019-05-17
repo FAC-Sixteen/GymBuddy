@@ -1,0 +1,40 @@
+// insert form layout
+
+.input-text {
+    border-radius: var(--btn-radius);
+    margin-bottom: var(--space-lg);
+    border: 2px solid var(--yellow);
+    padding-left: var(--space-xs);
+    width: 75%;
+}
+
+.input-btn {
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 1;
+    border: 2px solid var(--yellow);
+    border-radius: var(--btn-radius);
+    background: white;
+    margin: var(--space-xxxs);
+    overflow:auto;
+    float:left;
+    label {
+        cursor: pointer;
+        width:2em;
+        float:left;
+        span {
+            width: 8em;
+            padding: var(--space-md) var(--space-md);
+            text-align:center;
+            display:block;
+        }
+        input {
+            position:absolute;
+            top:-20px;
+        }
+        input:checked + span {
+            background-color: var(--grey);
+        }     
+    }
+}

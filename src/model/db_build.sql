@@ -11,8 +11,6 @@ CASCADE;
 DROP TABLE IF EXISTS users_time
 CASCADE;
 
-
-
 CREATE TABLE users
 (
     users_id SERIAL PRIMARY KEY,
@@ -73,4 +71,26 @@ VALUES
     ('Evening'),
     ('Flexible');
 
-COMMIT;
+INSERT INTO users_goals
+(users_id, goals_id)
+VALUES 
+    (1, 2),
+    (1, 4),
+    (2, 1),
+    (2, 2),
+    (3, 2),
+    (3, 4),
+    (4, 2),
+    (4, 1);
+
+INSERT INTO users_time
+(users_id, time_id)
+VALUES
+    (1, 2),
+    (1, 4),
+    (2, 1),
+    (2, 2),
+    (3, 2),
+    (3, 4),
+    (4, 2),
+    (4, 1);

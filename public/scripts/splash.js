@@ -1,6 +1,9 @@
+const buttonRightArrow = document.querySelector('.btn__arrow-right');
+
+buttonRightArrow.style.visibility = 'hidden';
+
 const displayButton = () => {
-    const welcomeButton = document.getElementById('find_buddy_button');
-    setTimeout(() => welcomeButton.style.display = 'inline', 2000)
+    setTimeout(() => buttonRightArrow.style.visibility = 'visible', 2000)
 }
 
 document.onload = displayButton();

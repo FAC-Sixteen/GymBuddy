@@ -1,1 +1,13 @@
 // insert header layout
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pink);
+    padding: var(--space-xs);
+    color: var(--yellow);
+    // h1 {
+    
+    // }
+}

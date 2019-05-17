@@ -1,6 +1,8 @@
+
 // --grids--
 // 1. auto-grid
 // 2. 2D grid
+// 3. basic 1fr 1fr grid
 
 
 
@@ -13,12 +15,18 @@
     // 2.
 .two-dem-grid {
     @include gridLayout(
-      (12, 1), //item 1 | These
+      (2, 1), //item 1 | These
       (5, 1), //item 2 | are
       (5, 1), //item 3 | dummy
       (12, 1) //item 4 | values
     );
-  }
+};
 
+    // 3.        
+.basic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+};
 
 
