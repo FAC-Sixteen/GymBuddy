@@ -38,3 +38,11 @@
         }     
     }
 }
+
+.textarea-bio {
+    resize: none;
+    max-width: 100%; 
+    max-height: 100%;
+    border: 2px solid var(--yellow);
+    border-radius: var(--btn-radius);
+}
