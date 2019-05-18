@@ -10,7 +10,8 @@
     "tapetest": "NODE_ENV=test node tests/db_tests.js | tap-spec"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "verbose": true
   },
   "repository": {
     "type": "git",

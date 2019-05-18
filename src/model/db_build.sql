@@ -10,11 +10,8 @@ DROP TABLE IF EXISTS users_goals
 CASCADE;
 DROP TABLE IF EXISTS users_time
 CASCADE;
-<<<<<<< HEAD:src/model/db_build.sql
-
-
-=======
->>>>>>> 460b977edaa8b3b39602e028f62a4e83d8120eba:src/model/db_build.sql
+DROP TABLE IF EXISTS users_location
+CASCADE;
 
 CREATE TABLE users
 (
@@ -51,6 +48,12 @@ CREATE TABLE users_time
     time_id INTEGER REFERENCES time(time_id)
 );
 
+CREATE TABLE users_location
+(
+    users_id INTEGER REFERENCES users(users_id),
+    latitude INTEGER,
+    longitude INTEGER
+);
 
 INSERT INTO users
     (users_name, age, gender, location, experience, photo)
