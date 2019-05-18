@@ -654,6 +654,12 @@ template {
   padding: var(--space-md);
 }
 
+.container-hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
 .flex-body {
   margin: 0;
   display: -webkit-box;
