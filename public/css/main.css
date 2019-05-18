@@ -623,6 +623,32 @@ template {
      object-fit: contain;
 }
 
+.image__icon__avatar-profile {
+  height: auto;
+  width: 5em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 10em;
+  width: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--grey-light);
+  border: 2px solid var(--grey);
+}
+
+.add {
+  font-size: var(--text-xxl);
+  padding-bottom: var(--space-xl);
+}
+
 .text-coc {
   padding: var(--space-md);
 }
@@ -635,7 +661,7 @@ template {
   background-color: var(--pink);
 }
 
-.container-button {
+.container-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

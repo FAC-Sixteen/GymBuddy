@@ -11,7 +11,7 @@ pageTwo.style.visibility = 'hidden';
 
 buttonRight.addEventListener('click', (e) => {
     e.preventDefault();
-    pageTwo.classList.remove("container-hide");
+    pageTwo.classList.remove('container-hide');
     pageOne.style.display = 'none';
     pageTwo.style.visibility = 'visible'; 
 });

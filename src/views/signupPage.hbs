@@ -1,14 +1,21 @@
+{{!-- // this file is incomplete TODO:
+// 1. consider swapping header labels with <fieldset> <legend></legend></fieldset>
+// 2. fix form to ensure all the input values are sent to the back
+// 3. fix navigation, add back buttons and fix button to createProfilePage --}}
+
+
+
 <section class="container-main">
     <form class="form-main" action="/submit" method="post">   
 
     {{!-- page 1 --}}
         <div class="page-one">
-            <label for="input-name">name:<br><br>
-                <input  class="input-text" type="text" name="name" value="" id="input-name" pattern="^[A-Za-z]+$" required><br>
+            <label for="input-name">name:<br><br> 
+                <input  class="input-text" type="text" value="" id="input-name" pattern="^[A-Za-z]+$" required><br>
             </label>
 
             <label for="input-age">age:<br><br>
-                <input  class="input-text" type="text" name="name" value="" id="input-age" pattern="^[A-Za-z]+$" required><br>
+                <input  class="input-text" type="text"  value="" id="input-age" pattern="^[A-Za-z]+$" required><br>
             </label>
             <label for="input-gender">what best describes your gender:<br><br> </label>
             <section class="basic-grid">      
@@ -23,18 +30,18 @@
                     </label>
                 </div>    
                 <div class="input-btn">
-                    <label >
-                        <input type="checkbox" value="1"><span>red</span>
+                    <label for="pref-not-to-say">
+                        <input type="checkbox" id="pref-not-to-say" value="1"><span>prefer not to say</span>
                     </label>
                 </div>    
                 <div class="input-btn">
-                    <label>
-                        <input type="checkbox" value="1"><span>red</span>
+                    <label for="pref-not-to-self-des">
+                        <input type="checkbox" id="pref-not-to-self-des" value="1"><span>self-describe</span>
                     </label>
                 </div>              
             </section>
 
-            <div class="container-button">
+            <div class="container-center">
                 <button class="btn__arrow-right">
                     {{!-- <a href="/conduct-page"> --}}
                         <img src="./assets/right-arrow.png" alt="arrow button to the right">
@@ -74,55 +81,51 @@
             <label for="input-time"> <br>what experience level best describes you:<br><br> </label> 
             <section class="basic-grid">      
                 <div class="input-btn">
-                    <label for="morning">
-                        <input type="checkbox" id="morning" value="1"><span>morning</span>
+                    <label for="beginner">
+                        <input type="checkbox" id="beginner" value="1"><span>beginner</span>
                     </label>
                 </div>
                 <div class="input-btn">
-                    <label for="afternoon">
-                        <input type="checkbox" id="afternoon" value="1"><span>afternoon</span>
+                    <label for="intermediate">
+                        <input type="checkbox" id="intermediate" value="1"><span>intermediate</span>
                     </label>
                 </div>    
                 <div class="input-btn">
-                    <label for="evening" >
-                        <input type="checkbox" id="evening" value="1"><span>evening</span>
+                    <label for="advanced" >
+                        <input type="checkbox" id="advanced" value="1"><span>advanced</span>
                     </label>
                 </div>    
-                <div class="input-btn">
-                    <label for="flexible">
-                        <input type="checkbox" id="flexible" value="1"><span>flexible</span>
-                    </label>
-                </div>              
+                          
             </section>
 
             <label for="input-time"> <br>pick at least one goal:<br><br> </label> 
             <section class="basic-grid">      
                 <div class="input-btn">
-                    <label for="morning">
-                        <input type="checkbox" id="morning" value="1"><span>morning</span>
+                    <label for="keeping-fit">
+                        <input type="checkbox" id="keeping-fit" value="1"><span>keeping fit</span>
                     </label>
                 </div>
                 <div class="input-btn">
-                    <label for="afternoon">
-                        <input type="checkbox" id="afternoon" value="1"><span>afternoon</span>
+                    <label for="building-muscle">
+                        <input type="checkbox" id="building-muscle" value="1"><span>building muscle</span>
                     </label>
                 </div>    
                 <div class="input-btn">
-                    <label for="evening" >
-                        <input type="checkbox" id="evening" value="1"><span>evening</span>
+                    <label for="losing-weight" >
+                        <input type="checkbox" id="losing-weight" value="1"><span>losing weight</span>
                     </label>
                 </div>    
                 <div class="input-btn">
-                    <label for="flexible">
-                        <input type="checkbox" id="flexible" value="1"><span>flexible</span>
+                    <label for="looking-to-begin">
+                        <input type="checkbox" id="looking-to-begin" value="1"><span>looking to begin</span>
                     </label>
                 </div>              
             </section>
-            <div class="container-button">
-                <button class="btn__arrow-right" onclick="openPage(event, 'page-two')">
-                    {{!-- <a href="/conduct-page"> --}}
+            <div class="container-center">
+                <button class="btn__arrow-right">
+                    <a href="/create-profile-page">
                         <img src="./assets/right-arrow.png" alt="arrow button to the right">
-                    {{!-- </a> --}}
+                    </a>
                 </button>    
             </div>
         </div>
