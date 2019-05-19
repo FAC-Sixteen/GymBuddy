@@ -6,37 +6,37 @@
 
 
 <section class="container-main">
-    <form class="form-main" action="/submit" method="post">   
+    <form class="form-main" action="/:gender-gender/:time-time" id="signUp" method="post">   
 
     {{!-- page 1 --}}
         <div class="page-one">
             <label for="input-name">name:<br><br> 
-                <input  class="input-text" type="text" value="" id="input-name" pattern="^[A-Za-z]+$" required><br>
+                <input  class="input-text" type="text" value="" form="signUp" id="input-name" name="input-name" pattern="^[A-Za-z]+$" required><br>
             </label>
 
             <label for="input-age">age:<br><br>
-                <input  class="input-text" type="text"  value="" id="input-age" pattern="^[A-Za-z]+$" required><br>
+                <input  class="input-text" type="text"  value="" form="signUp" id="input-age" name="input-age" pattern="^[A-Za-z]+$" required><br>
             </label>
             <label for="input-gender">what best describes your gender:<br><br> </label>
             <section class="basic-grid">      
                 <div class="input-btn">
                     <label for="woman">
-                        <input type="checkbox" id="woman" value="1"><span>woman</span>
+                        <input type="checkbox" id="woman" form="signUp" value="woman" name="woman"><span>woman</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="man">
-                        <input type="checkbox" id="man" value="1"><span>man</span>
+                        <input type="checkbox" id="man" form="signUp" value="man" name="man"><span>man</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="pref-not-to-say">
-                        <input type="checkbox" id="pref-not-to-say" value="1"><span>prefer not to say</span>
+                        <input type="checkbox" id="pref-not-to-say" form="signUp" value="pref-not-to-say" name="pref-not-to-say"><span>prefer not to say</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="pref-not-to-self-des">
-                        <input type="checkbox" id="pref-not-to-self-des" value="1"><span>self-describe</span>
+                        <input type="checkbox" id="pref-not-to-self-des" form="signUp" value="pref-not-to-self-des" name="pref-not-to-self-des"><span>self-describe</span>
                     </label>
                 </div>              
             </section>
@@ -56,43 +56,43 @@
             <section class="basic-grid">      
                 <div class="input-btn">
                     <label for="morning">
-                        <input type="checkbox" id="morning" value="1"><span>morning</span>
+                        <input type="checkbox" id="morning" form="signUp" value="morning" name="time"><span>morning</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="afternoon">
-                        <input type="checkbox" id="afternoon" value="1"><span>afternoon</span>
+                        <input type="checkbox" id="afternoon" form="signUp" value="afternoon" name="time"><span>afternoon</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="evening" >
-                        <input type="checkbox" id="evening" value="1"><span>evening</span>
+                        <input type="checkbox" id="evening" form="signUp" value="evening" name="time"><span>evening</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="flexible">
-                        <input type="checkbox" id="flexible" value="1"><span>flexible</span>
+                        <input type="checkbox" id="flexible" form="signUp" value="flexible" name="time"><span>flexible</span>
                     </label>
                 </div>              
             </section>
 
 
             {{!-- naughty me using brs for spacing -todo fixthis --}}
-            <label for="input-time"> <br>what experience level best describes you:<br><br> </label> 
+            <label for="input-exp"> <br>what experience level best describes you:<br><br> </label> 
             <section class="basic-grid">      
                 <div class="input-btn">
                     <label for="beginner">
-                        <input type="checkbox" id="beginner" value="1"><span>beginner</span>
+                        <input type="checkbox" id="beginner" form="signUp" value="beginner" name="exp"><span>beginner</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="intermediate">
-                        <input type="checkbox" id="intermediate" value="1"><span>intermediate</span>
+                        <input type="checkbox" id="intermediate" form="signUp" value="intermediate" name="exp"><span>intermediate</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="advanced" >
-                        <input type="checkbox" id="advanced" value="1"><span>advanced</span>
+                        <input type="checkbox" id="advanced" form="signUp" value="advanced" name="exp"><span>advanced</span>
                     </label>
                 </div>    
                           
@@ -102,33 +102,31 @@
             <section class="basic-grid">      
                 <div class="input-btn">
                     <label for="keeping-fit">
-                        <input type="checkbox" id="keeping-fit" value="1"><span>keeping fit</span>
+                        <input type="checkbox" id="keeping-fit" form="signUp" value="keeping-fit" name="goal"><span>keeping fit</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="building-muscle">
-                        <input type="checkbox" id="building-muscle" value="1"><span>building muscle</span>
+                        <input type="checkbox" id="building-muscle" form="signUp" value="building-muscle" name="goal"><span>building muscle</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="losing-weight" >
-                        <input type="checkbox" id="losing-weight" value="1"><span>losing weight</span>
+                        <input type="checkbox" id="losing-weight" form="signUp" value="losing-weight" name="goal"><span>losing weight</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="looking-to-begin">
-                        <input type="checkbox" id="looking-to-begin" value="1"><span>looking to begin</span>
+                        <input type="checkbox" id="looking-to-begin" form="signUp" value="looking-to-begin" name="looking-to-begin"><span>looking to begin</span>
                     </label>
                 </div>              
             </section>
-            <div class="container-center">
-                <button class="btn__arrow-right">
-                    <a href="/create-profile-page">
+    </form>
+    <div class="container-center">
+                <button class="btn__arrow-right" type="submit" form="signUp">
+                    {{!-- <a class="" href="/create-profile-page"> --}}
                         <img src="./assets/right-arrow.png" alt="arrow button to the right">
-                    </a>
+                    {{!-- </a> --}}
                 </button>    
             </div>
-        </div>
-    </form>
-    <script src="scripts/signup.js"></script>
 </section>
