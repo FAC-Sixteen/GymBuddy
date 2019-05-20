@@ -15,17 +15,7 @@ console.log(secondButtonRight)
 // 2. Feature/add conditionals for if age, name or gender selections are/ are not emitted 
 // 3. Fix/Currently emulating splash functionality is causing the timeout function to be called again from conduct -> signup page.
 
-//splash
 
-const buttonRightArrow = document.querySelector('.btn__arrow-right');
-
-buttonRightArrow.style.visibility = 'hidden';
-
-const displayButton = () => {
-    setTimeout(() => buttonRightArrow.style.visibility = 'visible', 2000);
-}
-
-document.onload = displayButton();
 
 // signUpPage
 
