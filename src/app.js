@@ -2,6 +2,7 @@ const express = require('express');
 const controllers = require('./controller/index');
 const handlebars = require('express-handlebars');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.engine(
 );
 
 app.set('port', process.env.PORT || 3000);
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(controllers);
 
