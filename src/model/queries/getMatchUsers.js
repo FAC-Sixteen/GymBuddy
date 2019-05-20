@@ -66,37 +66,36 @@ const completeUserData = (
   resultArr.push(userTime);
 
   Promise.all(resultArr).then(value => {
-    mapData(value);
+    mapGoalsData(value);
   });
 };
 
 completeUserData(28, "Male", "London", "Beginner", 2, 2);
 
-const sortObj = (obj = "{ users_id: 2, goals_id: '' }") => {
-  const goal = obj.goals_id;
-  return goal;
+const sortObj = (obj = `{ users_id: 2, ${part}: '' }`, part) => {
+  const partId = obj[part];
+  return partId;
 };
 
-const mapData = value => {
+const mapGoalsData = value => {
   let objOne = { ...value[0][0] };
   let goalsObjOne = { ...value[1][0] };
   let goalsObjTwo = { ...value[1][1] };
   let goalsObjThree = { ...value[1][2] };
   let goalsObjFour = { ...value[1][3] };
 
-  const firstGoal = sortObj(goalsObjOne);
-  const secondGoal = sortObj(goalsObjTwo);
-  const thirdGoal = sortObj(goalsObjThree);
-  const fourthGoal = sortObj(goalsObjFour);
+  const firstGoal = sortObj(goalsObjOne, "goals_id");
+  const secondGoal = sortObj(goalsObjTwo, "goals_id");
+  const thirdGoal = sortObj(goalsObjThree, "goals_id");
+  const fourthGoal = sortObj(goalsObjFour, "goals_id");
 
   objOne.goals_id = [firstGoal, secondGoal, thirdGoal, fourthGoal];
 
   const objTotalNumGoals = value[1].length;
-  console.log("first", objOne);
   for (i = 0; i < objTotalNumGoals; i++) {
     objOne.goals_id.pop();
   }
-  console.log("second", objOne);
+  console.log(objOne);
 };
 
 module.exports = {
