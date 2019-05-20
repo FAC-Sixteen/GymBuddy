@@ -10,6 +10,11 @@ DROP TABLE IF EXISTS users_goals
 CASCADE;
 DROP TABLE IF EXISTS users_time
 CASCADE;
+<<<<<<< HEAD:src/model/db_build.sql
+
+
+=======
+>>>>>>> 460b977edaa8b3b39602e028f62a4e83d8120eba:src/model/db_build.sql
 
 CREATE TABLE users
 (
