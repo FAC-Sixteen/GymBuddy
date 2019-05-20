@@ -464,6 +464,7 @@ template {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  cursor: pointer;
 }
 
 .btn__round-large {
@@ -523,6 +524,14 @@ template {
 
 .input-btn label input:checked + span {
   background-color: var(--grey);
+}
+
+.textarea-bio {
+  resize: none;
+  max-width: 100%;
+  max-height: 100%;
+  border: 2px solid var(--yellow);
+  border-radius: var(--btn-radius);
 }
 
 .auto-grid::before, .auto-grid::after {
@@ -616,11 +625,46 @@ template {
       grid-template-rows: 1fr 1fr;
 }
 
+.basic-grid-gap {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
 .image-splash {
   height: auto;
   width: 24em;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.image__icon__avatar-profile {
+  height: auto;
+  width: 5em;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 10em;
+  width: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--grey-light);
+  border: 2px solid var(--grey);
+}
+
+.add {
+  font-size: var(--text-xxl);
+  padding-bottom: var(--space-xl);
 }
 
 .text-coc {
@@ -635,7 +679,7 @@ template {
   background-color: var(--pink);
 }
 
-.container-button {
+.container-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -652,6 +696,12 @@ template {
 
 .container-main {
   padding: var(--space-md);
+}
+
+.container-hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
 }
 
 .flex-body {

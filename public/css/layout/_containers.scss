@@ -7,7 +7,7 @@
 }
 
 
-.container-button {
+.container-center {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -17,4 +17,10 @@
 
 .container-main {
     padding: var(--space-md);
+}
+
+.container-hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 }

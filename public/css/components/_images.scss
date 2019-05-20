@@ -3,3 +3,24 @@
     width: 24em;
     object-fit: contain;
 }
+
+.image__icon__avatar-profile {
+    height: auto;
+    width: 5em;
+    object-fit: contain;    
+}
+
+.circle {
+    border-radius: 50%;
+    height: 10em; 
+    width:10em;
+    display: flex;
+    justify-content: center;
+    background-color: var(--grey-light);
+    border: 2px solid var(--grey);
+}
+
+.add {
+    font-size: var(--text-xxl);
+    padding-bottom: var(--space-xl);
+}
