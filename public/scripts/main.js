@@ -6,9 +6,10 @@ const domName = document.querySelector('.dom-name');
 const secondButtonRight = document.querySelectorAll('.btn__arrow-right')[1];
 const inputText = document.querySelector('.input-text');
 const btnRoundLarge = document.querySelector('.btn__round-large');
-// console.log(inputText);
+const inputAge = form.childNodes[1].childNodes[3].childNodes[4]
 // console.log(domName);
-console.log(secondButtonRight)
+
+console.log(inputAge);
 // console.log(inputText)
 // this file is incomplete TODO:
 // 1. Feature/add back button
@@ -23,9 +24,17 @@ pageTwo.style.visibility = 'hidden';
 
 buttonRight.addEventListener('click', (e) => {
     e.preventDefault();
-    pageTwo.classList.remove('container-hide');
-    pageOne.classList.add('container-hide');
-    pageTwo.style.visibility = 'visible'; 
+    if (!inputText.validity.valueMissing || !inputAge.validity.valueMissing) {
+        pageTwo.classList.remove('container-hide');
+        pageOne.classList.add('container-hide');
+        pageTwo.style.visibility = 'visible'; 
+    } 
+    else {
+        inputText.style.borderColor = 'red';
+        inputText.placeholder = 'name required';
+        inputAge.style.borderColor = 'red';
+        inputAge.placeholder = 'enter required';
+    }
 });
 
 secondButtonRight.addEventListener('click', (e) => {
