@@ -21,7 +21,7 @@
   --red: #f94747;
   --yellow: #ffd137;
   --btn-font-size: 1em;
-  --btn-radius: 0.75em;
+  --btn-radius: 100px;
   --space-unit: 1em;
   --space-xxxs: calc(0.25 * var(--space-unit));
   --space-xxs:  calc(0.375 * var(--space-unit));

@@ -10,6 +10,8 @@ DROP TABLE IF EXISTS users_goals
 CASCADE;
 DROP TABLE IF EXISTS users_time
 CASCADE;
+DROP TABLE IF EXISTS users_location
+CASCADE;
 
 CREATE TABLE users
 (
@@ -46,6 +48,12 @@ CREATE TABLE users_time
     time_id INTEGER REFERENCES time(time_id)
 );
 
+CREATE TABLE users_location
+(
+    users_id INTEGER REFERENCES users(users_id),
+    latitude INTEGER,
+    longitude INTEGER
+);
 
 INSERT INTO users
     (users_name, age, gender, location, experience, photo)
