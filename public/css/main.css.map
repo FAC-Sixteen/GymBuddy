@@ -20,6 +20,7 @@
         "layout/_flex.scss",
         "layout/_footer.scss",
         "layout/_grid.scss",
+        "layout/_header-settings.scss",
         "layout/_header.scss"
     ],
     "names": [],
