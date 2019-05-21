@@ -6,26 +6,17 @@ const domName = document.querySelector('.dom-name');
 const secondButtonRight = document.querySelectorAll('.btn__arrow-right')[1];
 const inputText = document.querySelector('.input-text');
 const btnRoundLarge = document.querySelector('.btn__round-large');
-// console.log(inputText);
+const inputAge = form.childNodes[1].childNodes[3].childNodes[4]
 // console.log(domName);
-console.log(secondButtonRight)
+
+console.log(inputAge);
 // console.log(inputText)
 // this file is incomplete TODO:
 // 1. Feature/add back button
 // 2. Feature/add conditionals for if age, name or gender selections are/ are not emitted 
 // 3. Fix/Currently emulating splash functionality is causing the timeout function to be called again from conduct -> signup page.
 
-//splash
 
-const buttonRightArrow = document.querySelector('.btn__arrow-right');
-
-buttonRightArrow.style.visibility = 'hidden';
-
-const displayButton = () => {
-    setTimeout(() => buttonRightArrow.style.visibility = 'visible', 2000);
-}
-
-document.onload = displayButton();
 
 // signUpPage
 
@@ -33,9 +24,20 @@ pageTwo.style.visibility = 'hidden';
 
 buttonRight.addEventListener('click', (e) => {
     e.preventDefault();
-    pageTwo.classList.remove('container-hide');
-    pageOne.classList.add('container-hide');
-    pageTwo.style.visibility = 'visible'; 
+    if (!inputText.validity.valueMissing || !inputAge.validity.valueMissing) {
+        pageTwo.classList.remove('container-hide');
+        pageOne.classList.add('container-hide');
+        pageTwo.style.visibility = 'visible'; 
+    } 
+    else {
+        inputText.style.borderColor = 'red';
+        inputText.placeholder = 'name required';
+        inputAge.style.borderColor = 'red';
+        inputAge.placeholder = 'age required';
+    }
+    // if (!inputAge.validity.patternMismatch){
+    //     TODO
+    // }
 });
 
 secondButtonRight.addEventListener('click', (e) => {
