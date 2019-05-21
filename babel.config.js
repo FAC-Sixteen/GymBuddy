@@ -1,11 +1,11 @@
-module.exports = function (api) {
-    api.cache(true);
+// module.exports = function (api) {
+//     api.cache(true);
   
-    // const presets = [ ... ];
-    const plugins = ["@babel/plugin-transform-async-to-generator"];
+//     // const presets = [ ... ];
+//     const plugins = ["@babel/plugin-transform-async-to-generator"];
   
-    return {
-    //   presets,
-      plugins
-    };
-  }
+//     return {
+//     //   presets,
+//       plugins
+//     };
+//   }
