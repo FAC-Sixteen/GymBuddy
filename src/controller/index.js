@@ -8,6 +8,7 @@ const conductPage = require('./conductPage');
 const signup = require("./signupPage");
 const createProfilePage = require('./createProfilePage');
 const location = require('./location');
+const searchPage = require('./searchPage');
 
 
 router.post('/locate', location.post); 
@@ -24,6 +25,7 @@ router.post('/:gender-gender/:time-time', (req, res, next) => {
 });
 
 router.get('/create-profile-page', createProfilePage.get);
+router.get('/search-page', searchPage.get);
 
 router.use(error.client);
 router.use(error.server);
