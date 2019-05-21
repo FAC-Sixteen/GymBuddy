@@ -1,6 +1,6 @@
 const runDbBuild = require('../src/model/db_build');
 const postData = require('../src/model/queries/postData');
-const getData = require('../src/model/queries/getData');
+const getData = require('../src/model/queries/insertData');
 
 const firstUser = {
     "age": 21, 
