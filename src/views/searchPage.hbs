@@ -5,38 +5,99 @@
 
 
 <section class="container-main">
-    <h4>Search Prefs</h4>
+    <h4>I would like my buddy to be...</h4>
     <form class ="form-main" id= "searchPrefs" action="/search-settings" method="POST">
-        <div class="">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" form="searchPrefs">
-        </div>
-        <div class="">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" form="searchPrefs">
-        </div>
-
-        <button class="TODO">Open Collapsible</button>
-        <div class="content">
-            <p>Lorem ipsum...</p>
-        </div>
-
-
-        <button class="TODO">Open Collapsible</button>
-        <div class="content">
-            <p>Lorem ipsum...</p>
+        <div class="container-main">
+            <label for="ageRange"><p>age: <span class="age-reading">0</span></p>
+                    <input class = "slider"  type="range" min="18" max="100" value="50" id="ageRange" form="searchPrefs">
+                </label>    
+            <div class="">
+                <label for="distanceRange"> <p>distance: <span class="distance-reading"> 0 km</span></p>
+                    <input class="slider"type="range" min="1" max="100" value="50" id="distanceRange" form="searchPrefs">
+                </label>
+            </div>
         </div>
 
-        <button class="TODO">Open Collapsible</button>
-        <div class="content">
-            <p>Lorem ipsum...</p>
-        </div>
+        <button class="collapsible">Gender</button>
+            <h5 class="gender container-hide">gender:</h5>
+            <section class="basic-grid container-hide gender">      
+                <div class="input-btn">
+                    <label for="woman">
+                        <input type="checkbox" id="woman" form="searchPrefs" value="woman" name="gender"><span>woman</span>
+                    </label>
+                </div>
+                <div class="input-btn">
+                    <label for="man">
+                        <input type="checkbox" id="man" form="searchPrefs" value="man" name="gender"><span>man</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="pref-not-to-say">
+                        <input type="checkbox" id="pref-not-to-say" form="searchPrefs" value="pref-not-to-say" name="gender"><span>prefer not to say</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="pref-not-to-self-des">
+                        <input type="checkbox" id="pref-not-to-self-des" form="searchPrefs" value="pref-not-to-self-des" name="gender"><span>self-describe</span>
+                    </label>
+                </div>              
+            </section>
+
+
+        <button class="collapsible">Experience level</button>
+            <h5 class="exp container-hide">exp:</h5>
+            <section class="basic-grid container-hide exp">      
+                <div class="input-btn">
+                    <label for="beginner">
+                        <input type="checkbox" id="beginner" form="searchPrefs" value="beginner" name="exp"><span>beginner</span>
+                    </label>
+                </div>
+                <div class="input-btn">
+                    <label for="intermediate">
+                        <input type="checkbox" id="intermediate" form="searchPrefs" value="intermediate" name="exp"><span>intermediate</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="advanced">
+                        <input type="checkbox" id="advanced" form="searchPrefs" value="advanced" name="exp"><span>advanced</span>
+                    </label>
+                </div>                
+            </section>
+
+        <button class="collapsible">Goals</button>
+        <h5 class="goals container-hide">Goals:</h5>
+           <section class="basic-grid container-hide goals">      
+                <div class="input-btn">
+                    <label for="keeping-fit">
+                        <input type="checkbox" id="keeping-fit" form="searchPrefs" value="keeping-fit" name="goal"><span>keeping fit</span>
+                    </label>
+                </div>
+                <div class="input-btn">
+                    <label for="building-muscle">
+                        <input type="checkbox" id="building-muscle" form="searchPrefs" value="building-muscle" name="goal"><span>building muscle</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="losing-weight" >
+                        <input type="checkbox" id="losing-weight" form="searchPrefs" value="losing-weight" name="goal"><span>losing weight</span>
+                    </label>
+                </div>    
+                <div class="input-btn">
+                    <label for="looking-to-begin">
+                        <input type="checkbox" id="looking-to-begin" form="searchPrefs" value="looking-to-begin" name="goal"><span>looking to begin</span>
+                    </label>
+                </div>              
+            </section>
+            <div class="container-center">
+                <button class="btn__round-large" type="submit" form="searchPrefs">
+                    <h4>Search</h4>
+                </button>    
+            </div>
     </form>
 
-    <div class="container-center">
-        <button class="btn__arrow-right" type="submit" form="searchPrefs">
-            <img src="./assets/right-arrow.png" alt="arrow button to the right">
-        </button>    
-    </div>
+  
     
-
-
+<footer class="footer">
+    <script src="scripts/searchPage.js"></script>
+</footer>
 </section>
