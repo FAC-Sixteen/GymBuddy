@@ -1,16 +1,17 @@
 {{!-- // this file is incomplete TODO:
 // 1. Feature/add classes and style
-// 2. Feature/add DOM logic to animate Collapsibles and slider values  --}}
+// 2. Feature/add DOM logic to animate Collapsibles and slider values 
+// 3. Feature/ add content to collapsibles with inputs and (nested) inputs to form --}}
 
 
 <section class="container-main">
     <h4>Search Prefs</h4>
-    <form class ="form-main "action="/search-settings" method="POST">
+    <form class ="form-main" id= "searchPrefs" action="/search-settings" method="POST">
         <div class="">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" form="searchPrefs">
         </div>
         <div class="">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" form="searchPrefs">
         </div>
 
         <button class="TODO">Open Collapsible</button>
@@ -29,6 +30,13 @@
             <p>Lorem ipsum...</p>
         </div>
     </form>
+
+    <div class="container-center">
+        <button class="btn__arrow-right" type="submit" form="searchPrefs">
+            <img src="./assets/right-arrow.png" alt="arrow button to the right">
+        </button>    
+    </div>
+    
 
 
 </section>
