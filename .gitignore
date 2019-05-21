@@ -1,10 +1,5 @@
 node_modules
-<<<<<<< HEAD
 config.env
-=======
-
-.env
-
 .sass-cache
 .sass-cache/*
->>>>>>> 460b977edaa8b3b39602e028f62a4e83d8120eba
+config.js

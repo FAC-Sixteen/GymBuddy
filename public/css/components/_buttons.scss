@@ -1,25 +1,44 @@
 // insert buttons style
 
 .btn__arrow-right {
-    border: none;
-    background: none;
-    margin: 0;
-    // padding: var(--space-xs);
-    align-self: center;
-    cursor: pointer;
+  border: none;
+  background: none;
+  margin: 0;
+  // padding: var(--space-xs);
+  align-self: center;
+  cursor: pointer;
 }
 
 .btn__round-large {
-    display: inline-flex;
-    position: relative;
-    white-space: nowrap;
-    text-decoration: none;
-    line-height: 1;
-    cursor: pointer;
-    padding: var(--space-md) var(--space-md);
-    border: 2px solid var(--yellow);
-    border-radius: var(--btn-radius);
-    font-size: var(--btn-font-size);
-    // color: var(--color-link);
-    background: white;
+  display: inline-flex;
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  padding: var(--space-md) var(--space-md);
+  border: 2px solid var(--yellow);
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  // color: var(--color-link);
+  background: white;
+}
+
+.btn__round-small {
+  display: inline-flex;
+  position: absolute;
+  bottom: 5%;
+  right: 40;
+  //   bottom: 0%;
+  //   top: 90%;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  padding: var(--space-md) var(--space-md);
+  border: 2px solid var(--yellow);
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  // color: var(--color-link);
+  background: white;
 }
