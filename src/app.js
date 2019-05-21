@@ -18,10 +18,12 @@ app.engine(
 	})
 );
 
+app.disable('x-powered-by');
 app.set('port', process.env.PORT || 3000);
+// app.use(favicon(path.join(__dirname, '..', 'public', 'assets', 'favicon.ico')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-	extended: true
+	extended: false
 }));
 
 app.use(express.static(path.join(__dirname, '..', 'public')));
