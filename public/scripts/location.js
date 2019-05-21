@@ -1,5 +1,3 @@
-console.log('hello')
-
 const getCurrentLocation = () => new Promise((resolve, reject) => {
     if (navigator.geolocation){
         navigator.geolocation.getCurrentPosition(

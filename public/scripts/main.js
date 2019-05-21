@@ -33,8 +33,11 @@ buttonRight.addEventListener('click', (e) => {
         inputText.style.borderColor = 'red';
         inputText.placeholder = 'name required';
         inputAge.style.borderColor = 'red';
-        inputAge.placeholder = 'enter required';
+        inputAge.placeholder = 'age required';
     }
+    // if (!inputAge.validity.patternMismatch){
+    //     TODO
+    // }
 });
 
 secondButtonRight.addEventListener('click', (e) => {
