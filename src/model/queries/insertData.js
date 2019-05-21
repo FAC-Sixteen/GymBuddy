@@ -1,6 +1,6 @@
 const dbConnection = require('../db_connections.js');
 
-const postUserGoals = (users_id, goal) => {
+const insertUserGoals = (users_id, goal) => {
        
     const query = `
         INSERT INTO users_goals 
@@ -10,17 +10,7 @@ const postUserGoals = (users_id, goal) => {
         return dbConnection.query(query, [users_id, goal])
 }
 
-const postUserLocation = (users_id, latitude, longitude) => {
-    const query = `
-    INSERT INTO users_location
-    VALUES
-    ($1, $2, $3)
-    `
-
-    return dbConnection.query(query, [users_id, latitude, longitude])
-}
-
-const postUserData = (users_name, age, gender, location, experience, photo) => {
+const insertUserData = (users_name, age, gender, location, experience, photo) => {
     const query = `
         INSERT INTO users
         (users_name, age, gender, location, experience, photo)
@@ -35,7 +25,6 @@ const postUserData = (users_name, age, gender, location, experience, photo) => {
 }
 
 module.exports = {
-    postUserData,
-    postUserGoals,
-    postUserLocation
+    insertUserData,
+    insertUserGoals
 };

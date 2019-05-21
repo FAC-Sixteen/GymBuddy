@@ -1,5 +1,5 @@
 const tape = require("tape");
-const postData = require('../src/model/queries/postData');
+const postData = require('../src/model/queries/insertData');
 const getData = require('../src/model/queries/getData');
 const runDbBuild = require("../src/model/db_build");
 
