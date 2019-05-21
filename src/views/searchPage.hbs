@@ -9,11 +9,11 @@
     <form class ="form-main" id= "searchPrefs" action="/search-settings" method="POST">
         <div class="container-main">
             <label for="ageRange"><p>age: <span class="age-reading">0</span></p>
-                    <input class = "slider"  type="range" min="18" max="100" value="50" id="ageRange" form="searchPrefs">
+                    <input class = "slider"  type="range" min="18" max="100" value="" id="ageRange" name="agePref" form="searchPrefs">
                 </label>    
-            <div class="">
+            <div>
                 <label for="distanceRange"> <p>distance: <span class="distance-reading"> 0 km</span></p>
-                    <input class="slider"type="range" min="1" max="100" value="50" id="distanceRange" form="searchPrefs">
+                    <input class="slider"type="range" min="1" max="100" value="" id="distanceRange" name="distancePref" form="searchPrefs">
                 </label>
             </div>
         </div>
@@ -23,22 +23,22 @@
             <section class="basic-grid container-hide gender">      
                 <div class="input-btn">
                     <label for="woman">
-                        <input type="checkbox" id="woman" form="searchPrefs" value="woman" name="gender"><span>woman</span>
+                        <input type="checkbox" id="woman" form="searchPrefs" value="woman" name="genderPref"><span>woman</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="man">
-                        <input type="checkbox" id="man" form="searchPrefs" value="man" name="gender"><span>man</span>
+                        <input type="checkbox" id="man" form="searchPrefs" value="man" name="genderPref"><span>man</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="pref-not-to-say">
-                        <input type="checkbox" id="pref-not-to-say" form="searchPrefs" value="pref-not-to-say" name="gender"><span>prefer not to say</span>
+                        <input type="checkbox" id="pref-not-to-say" form="searchPrefs" value="pref-not-to-say" name="genderPref"><span>prefer not to say</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="pref-not-to-self-des">
-                        <input type="checkbox" id="pref-not-to-self-des" form="searchPrefs" value="pref-not-to-self-des" name="gender"><span>self-describe</span>
+                        <input type="checkbox" id="pref-not-to-self-des" form="searchPrefs" value="pref-not-to-self-des" name="genderPref"><span>self-describe</span>
                     </label>
                 </div>              
             </section>
@@ -49,17 +49,17 @@
             <section class="basic-grid container-hide exp">      
                 <div class="input-btn">
                     <label for="beginner">
-                        <input type="checkbox" id="beginner" form="searchPrefs" value="beginner" name="exp"><span>beginner</span>
+                        <input type="checkbox" id="beginner" form="searchPrefs" value="beginner" name="expPref"><span>beginner</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="intermediate">
-                        <input type="checkbox" id="intermediate" form="searchPrefs" value="intermediate" name="exp"><span>intermediate</span>
+                        <input type="checkbox" id="intermediate" form="searchPrefs" value="intermediate" name="expPref"><span>intermediate</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="advanced">
-                        <input type="checkbox" id="advanced" form="searchPrefs" value="advanced" name="exp"><span>advanced</span>
+                        <input type="checkbox" id="advanced" form="searchPrefs" value="advanced" name="expPref"><span>advanced</span>
                     </label>
                 </div>                
             </section>
@@ -69,28 +69,28 @@
            <section class="basic-grid container-hide goals">      
                 <div class="input-btn">
                     <label for="keeping-fit">
-                        <input type="checkbox" id="keeping-fit" form="searchPrefs" value="keeping-fit" name="goal"><span>keeping fit</span>
+                        <input type="checkbox" id="keeping-fit" form="searchPrefs" value="keeping-fit" name="goalPref"><span>keeping fit</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="building-muscle">
-                        <input type="checkbox" id="building-muscle" form="searchPrefs" value="building-muscle" name="goal"><span>building muscle</span>
+                        <input type="checkbox" id="building-muscle" form="searchPrefs" value="building-muscle" name="goalPref"><span>building muscle</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="losing-weight" >
-                        <input type="checkbox" id="losing-weight" form="searchPrefs" value="losing-weight" name="goal"><span>losing weight</span>
+                        <input type="checkbox" id="losing-weight" form="searchPrefs" value="losing-weight" name="goalPref"><span>losing weight</span>
                     </label>
                 </div>    
                 <div class="input-btn">
                     <label for="looking-to-begin">
-                        <input type="checkbox" id="looking-to-begin" form="searchPrefs" value="looking-to-begin" name="goal"><span>looking to begin</span>
+                        <input type="checkbox" id="looking-to-begin" form="searchPrefs" value="looking-to-begin" name="goalPref"><span>looking to begin</span>
                     </label>
                 </div>              
             </section>
             <div class="container-center">
                 <button class="btn__round-large" type="submit" form="searchPrefs">
-                    <h4>Search</h4>
+                    <p>Search</p>
                 </button>    
             </div>
     </form>

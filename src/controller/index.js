@@ -26,7 +26,7 @@ router.post('/:gender-gender/:time-time', (req, res, next) => {
 
 router.post('/search-settings', (req, res, next) => {
     // console.log('params', req.params);
-    console.log('req', req);
+    console.log('req.body', req.body);
     // console.log(req)
     // res.redirect('/create-profile-page/');
 });
