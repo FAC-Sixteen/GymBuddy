@@ -19,7 +19,6 @@ const postUser = require('./postUserImage');
 
 
 const congratsPage = require("./congratsPage");
-const createProfilePage = require("./createProfilePage");
 const reportPage = require("./reportPage");
 
 
@@ -34,7 +33,6 @@ router.get("/", splash.get);
 router.get("/conduct-page", conductPage.get);
 router.get("/sign-up", signup.get);
 router.get("/congrats-page", congratsPage.get);
-router.get("/create-profile-page", createProfilePage.get);
 router.get("/match-buddies-page", matchBuddiesPage.get);
 router.get("/report-page", reportPage.get);
 
