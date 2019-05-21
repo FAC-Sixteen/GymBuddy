@@ -8,20 +8,18 @@ const signup = require("./signupPage");
 
 const location = require('./location');
 const postUser = require('./postUserImage');
+const congratsPage = require("./congratsPage");
+const createProfilePage = require("./createProfilePage");
 
-
+//POST
 router.post('/locate', location.post); 
 router.post('/create-profile', postUser.post)
 
-const createProfilePage = require("./createProfilePage");
-const location = require("./location");
-const congratsPage = require("./congratsPage");
-
+//GET
 router.get("/", splash.get);
 router.get("/conduct-page", conductPage.get);
 router.get("/sign-up", signup.get);
 router.get("/congrats-page", congratsPage.get);
-
 router.get("/create-profile-page", createProfilePage.get);
 
 
