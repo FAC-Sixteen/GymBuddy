@@ -12,6 +12,7 @@ const gender = document.querySelectorAll('.gender');
 const exp = document.querySelectorAll('.exp');
 const goals = document.querySelectorAll('.goals');
 
+console.log([...collapsibles])
 
 
 
@@ -24,12 +25,9 @@ distanceSlider.addEventListener('input', (e) => {
     distanceReading.innerHTML = `${e.target.value} km`;
 });
 
-var i;
-
-for (i = 0; i < collapsibles.length; i++) {
-    collapsibles[i].addEventListener("click", function(e) {
+    [...collapsibles].map(x => x.addEventListener('click', (e) => {
         e.preventDefault();
-        this.classList.toggle("active");
+        x.classList.toggle("active");
         if (genderCollap.classList.contains("active")) {
             gender[0].classList.remove('container-hide');
             gender[1].classList.remove('container-hide');
@@ -54,10 +52,10 @@ for (i = 0; i < collapsibles.length; i++) {
             goals[0].classList.add('container-hide');
             goals[1].classList.add('container-hide');
         }
+    }));
+    
         
-  });
-}
-
+        
 // btnSubmit.addEventListener('submit', (e) => {
 //     form
 // });
