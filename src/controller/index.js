@@ -8,16 +8,20 @@ const signup = require("./signupPage");
 const matchBuddiesPage = require("./matchBuddiesPage");
 const location = require('./location');
 
+const createUser = require('./createUser');
+
+
 const searchPage = require('./searchPage');
 
 const postUser = require('./postUserImage');
+
 const congratsPage = require("./congratsPage");
 const createProfilePage = require("./createProfilePage");
 
 
 //POST
 router.post('/locate', location.post); 
-router.post('/create-profile', postUser.post)
+router.post('/create-user', createUser.post);
 
 //GET
 router.get("/", splash.get);
