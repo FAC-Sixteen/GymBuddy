@@ -6,20 +6,19 @@
 
 
 <section class="container-main">
-    <form class="form-main" action="/:gender-gender/:time-time" id="signUp" method="post">
-
+    <form class="main-form" method="POST" action="create-user" form="signUp">
         {{!-- page 1 --}}
         <div class="page-one">
             <label for="input-name">name:<br><br>
                 <input class="input-text" type="text" value="" form="signUp" id="input-name" name="input-name"
                     pattern="^[A-Za-z]+$" required><br>
-
             </label>
 
             <label for="input-age">age:<br><br>
                 <input class="input-text" type="text" value="" form="signUp" id="input-age" name="input-age"
                     pattern="^[A-Za-z]+$" required><br>
             </label>
+
             <label for="input-gender">what best describes your gender:<br><br> </label>
             <section class="basic-grid">
                 <div class="input-btn">
@@ -45,18 +44,9 @@
                     </label>
                 </div>
             </section>
-
-            <div class="container-center">
-                <button class="btn__arrow-right">
-                    {{!-- <a href="/conduct-page"> --}}
-                    <img src="./assets/right-arrow.png" alt="arrow button to the right">
-                    {{!-- </a> --}}
-                </button>
-            </div>
-
         </div>
 
-        <div class="page-two container-hide">
+        <div class="page-two">
             <label for="input-gender">what time(s) work for you:<br><br> </label>
             <section class="basic-grid">
                 <div class="input-btn">
@@ -138,6 +128,7 @@
                 </div>
             </section>
         </div>
+
         <div class="page-three">
 
             <h4 class="dom-name">Josephine Bloggs</h4>
@@ -150,14 +141,17 @@
             </label>
 
         </div>
+        <button type="submit">create my profile</button>
     </form>
+
     <div class="container-center">
-        <button class="btn__arrow-right" type="submit" form="signUp">
-            
+        <button class="btn__arrow-right">
+            {{!-- <a href="/conduct-page"> --}}
             <img src="./assets/right-arrow.png" alt="arrow button to the right">
-    
+            {{!-- </a> --}}
         </button>
     </div>
+
 </section>
 
 
