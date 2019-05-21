@@ -1,8 +1,6 @@
-// insert header layout
-
-.header {
+.header-settings {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--pink);
   padding: var(--space-xs);
