@@ -483,6 +483,64 @@ template {
   background: white;
 }
 
+
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: var(--space-md) var(--space-md);
+  border-radius: var(--btn-radius);
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: var(--yellow);
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: var(--space-xs);
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  color: black;
+  float: right;
+}
+
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+
+.btn__round-small {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  bottom: 5%;
+  right: 40;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  padding: var(--space-md) var(--space-md);
+  border: 2px solid var(--yellow);
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  background: white;
+
+}
+
 .input-text {
   border-radius: var(--btn-radius);
   margin-bottom: var(--space-lg);
@@ -596,24 +654,6 @@ template {
     -ms-grid-row-span: 1;
         grid-row-end: span 1;
   }
-  .two-dem-grid > :nth-of-type(2) {
-    -ms-grid-column-span: 5;
-        grid-column-end: span 5;
-    -ms-grid-row-span: 1;
-        grid-row-end: span 1;
-  }
-  .two-dem-grid > :nth-of-type(3) {
-    -ms-grid-column-span: 5;
-        grid-column-end: span 5;
-    -ms-grid-row-span: 1;
-        grid-row-end: span 1;
-  }
-  .two-dem-grid > :nth-of-type(4) {
-    -ms-grid-column-span: 12;
-        grid-column-end: span 12;
-    -ms-grid-row-span: 1;
-        grid-row-end: span 1;
-  }
 }
 
 .basic-grid {
@@ -632,6 +672,104 @@ template {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+}
+
+.buddy-match-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.box1 {
+  background-size: cover;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 4;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.box2 {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 5;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.box4 {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.box5 {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 6;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.box6 {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.box7 {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 6;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.sub-title,
+.main-paragraph {
+  text-align: center;
+}
+
+.setting-icon {
+  height: 2.5rem;
+  width: auto;
+}
+
+.profile-icon {
+  height: 2.5rem;
+  width: auto;
 }
 
 .image-splash {
@@ -662,9 +800,56 @@ template {
   border: 2px solid var(--grey);
 }
 
+.matched-buddle-img {
+  border-radius: 50%;
+  height: 6em;
+  width: 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--grey-light);
+  border: 2px solid var(--grey);
+}
+
 .add {
   font-size: var(--text-xxl);
   padding-bottom: var(--space-xl);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 95%;
+  height: 15px;
+  background: white;
+  border: 2px solid var(--yellow);
+  border-radius: var(--btn-radius);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  padding: var(--space-xxs);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--orange);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--orange);
+  cursor: pointer;
 }
 
 .text-coc {
@@ -672,7 +857,7 @@ template {
 }
 
 .container-content {
-  height: 100vh;
+  height: 100%;
   width: 25em;
   border-radius: 0.25em;
   border: 1px solid var(--pink);
@@ -719,6 +904,20 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.header-settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--pink);
+  padding: var(--space-xs);
+  color: var(--yellow);
 }
 
 .header {
