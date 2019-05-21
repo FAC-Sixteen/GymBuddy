@@ -1,37 +1,110 @@
-
 // --grids--
 // 1. auto-grid
 // 2. 2D grid
 // 3. basic 1fr 1fr grid
 
-
-
-    // 1.
+// 1.
 .auto-grid {
-    @include grid;
-    @include gridAuto(260px);
-};
+  @include grid;
+  @include gridAuto(260px);
+}
 
-    // 2.
+// 2.
 .two-dem-grid {
-    @include gridLayout(
-      (2, 1), //item 1 | These
-      (5, 1), //item 2 | are
-      (5, 1), //item 3 | dummy
-      (12, 1) //item 4 | values
-    );
-};
+  @include gridLayout(
+    (2, 1),
+    // item 1 | These (5, 1),
+    // item 2 | are (5, 1),
+    // item 3 | dummy (12, 1) // item 4 | values
+  );
+}
 
-    // 3.        
+// 3.
 .basic-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-};
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
 
 .basic-grid-gap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-};
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
 
+// ---------------------------------------------
+.buddy-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.box1 {
+  background-size: cover;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.box2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+//morning
+.box4 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+//beginner
+.box5 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+//losing weight
+.box6 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+//build muscle
+.box7 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  background-color: lightgray;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.sub-title,
+.main-paragraph {
+  text-align: center;
+}
