@@ -34,11 +34,8 @@
     "qs": "^6.7.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.4.4",
     "jest": "^24.8.0",
     "nodemon": "^1.19.0",
-    "supertest": "^4.0.2",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.10.1"
+    "supertest": "^4.0.2"
   }
 }

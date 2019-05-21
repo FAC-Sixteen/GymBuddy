@@ -20,11 +20,4 @@ describe('test the home route path', () => {
 });
 
 
-describe('test the user location path', () => {
-    test('it should respond with status code 200', (done) => {
-        request(app).post('/locate').then((response) => {
-            expect(response.statusCode).toBe(200);
-            done();
-        });
-    });
-});
+
