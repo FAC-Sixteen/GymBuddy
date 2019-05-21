@@ -8,12 +8,14 @@ const signup = require("./signupPage");
 const createProfilePage = require("./createProfilePage");
 const location = require("./location");
 const matchBuddiesPage = require("./matchBuddiesPage");
+const userProfilePage = require("./userProfilePage");
 
 router.post("/locate", location.post);
 router.get("/", splash.get);
 router.get("/conduct-page", conductPage.get);
 router.get("/sign-up", signup.get);
 router.get("/match-buddies-page", matchBuddiesPage.get);
+router.get("/user-profile", userProfilePage.get);
 
 router.post("/:gender-gender/:time-time", (req, res, next) => {
   // console.log('params', req.params);

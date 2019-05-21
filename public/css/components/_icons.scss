@@ -9,3 +9,11 @@
   height: 2.5rem;
   width: auto;
 }
+
+.arrow-icon {
+  transform: rotate(180deg);
+  height: 3rem;
+  width: auto;
+  position: absolute;
+  top: 4%;
+}

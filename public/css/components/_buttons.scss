@@ -1,25 +1,42 @@
 // insert buttons style
 
 .btn__arrow-right {
-    border: none;
-    background: none;
-    margin: 0;
-    // padding: var(--space-xs);
-    align-self: center;
-    cursor: pointer;
+  border: none;
+  background: none;
+  margin: 0;
+  // padding: var(--space-xs);
+  align-self: center;
+  cursor: pointer;
 }
 
 .btn__round-large {
-    display: inline-flex;
-    position: relative;
-    white-space: nowrap;
-    text-decoration: none;
-    line-height: 1;
-    cursor: pointer;
-    padding: var(--space-md) var(--space-md);
-    border: 2px solid var(--yellow);
-    border-radius: var(--btn-radius);
-    font-size: var(--btn-font-size);
-    // color: var(--color-link);
-    background: white;
+  display: inline-flex;
+  position: relative;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  padding: var(--space-md) var(--space-md);
+  border: 2px solid var(--yellow);
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  // color: var(--color-link);
+  background: white;
+}
+
+.btn__round {
+  display: inline-flex;
+  background-color: var(--yellow);
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  text-align: center;
+  margin: 5% 10% 5% 10%;
+}
+
+.input-box {
+  height: 10rem;
+  width: 80%;
+  margin: 5% 10% 5% 10%;
 }

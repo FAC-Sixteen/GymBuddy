@@ -30,6 +30,17 @@
   border: 2px solid var(--grey);
 }
 
+.profile-img {
+  border-radius: 50%;
+  height: 10em;
+  width: 10em;
+  display: flex;
+  justify-content: center;
+  background-color: var(--grey-light);
+  border: 2px solid var(--grey);
+  margin: 0 auto;
+}
+
 .add {
   font-size: var(--text-xxl);
   padding-bottom: var(--space-xl);

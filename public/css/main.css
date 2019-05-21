@@ -483,6 +483,25 @@ template {
   background: white;
 }
 
+.btn__round {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: var(--yellow);
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  text-align: center;
+  margin: 5% 10% 5% 10%;
+}
+
+.input-box {
+  height: 10rem;
+  width: 80%;
+  margin: 5% 10% 5% 10%;
+}
+
 .input-text {
   border-radius: var(--btn-radius);
   margin-bottom: var(--space-lg);
@@ -704,6 +723,13 @@ template {
   text-align: center;
 }
 
+.p-border {
+  background-color: lightgray;
+  border-radius: 20px;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  margin: 1% 0% 0 1%;
+}
+
 .setting-icon {
   height: 2.5rem;
   width: auto;
@@ -712,6 +738,15 @@ template {
 .profile-icon {
   height: 2.5rem;
   width: auto;
+}
+
+.arrow-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  height: 3rem;
+  width: auto;
+  position: absolute;
+  top: 4%;
 }
 
 .image-splash {
@@ -756,6 +791,21 @@ template {
   border: 2px solid var(--grey);
 }
 
+.profile-img {
+  border-radius: 50%;
+  height: 10em;
+  width: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--grey-light);
+  border: 2px solid var(--grey);
+  margin: 0 auto;
+}
+
 .add {
   font-size: var(--text-xxl);
   padding-bottom: var(--space-xl);
@@ -796,6 +846,29 @@ template {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 2% 10% 2% 10%;
+}
+
+.container-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .flex-body {

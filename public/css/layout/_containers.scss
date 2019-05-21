@@ -23,3 +23,16 @@
   top: -9999px !important;
   left: -9999px !important;
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 2% 10% 2% 10%;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
