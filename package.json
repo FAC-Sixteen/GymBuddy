@@ -26,7 +26,6 @@
   "homepage": "https://github.com/FAC-Sixteen/GymBuddy#readme",
   "dependencies": {
     "aws-sdk": "^2.459.0",
-    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "cookie": "^0.4.0",
     "env2": "^2.2.2",
