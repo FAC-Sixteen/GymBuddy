@@ -900,6 +900,7 @@ template {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 12px;
+  row-gap: 12px;
 }
 
 .flex-body {
