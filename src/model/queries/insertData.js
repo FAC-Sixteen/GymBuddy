@@ -1,30 +1,40 @@
-const dbConnection = require('../db_connections.js');
+const dbConnection = require("../db_connections.js");
 
-const insertUserGoals = (users_id, goal) => {
-       
-    const query = `
+const insertUserGoals = (users_id, goal_id) => {
+  const query = `
         INSERT INTO users_goals 
         VALUES
         ($1, $2)
-    `   
-        return dbConnection.query(query, [users_id, goal])
-}
+    `;
+  return dbConnection.query(query, [users_id, goal_id]);
+};
 
-const insertUserData = (users_name, age, gender, location, experience, photo, bio) => {
-    const query = `
-        INSERT INTO users
-        (users_name, age, gender, location, experience, photo, bio)
+const insertUserLocation = (users_id, latitude, longitude) => {
+  const query = `
+        INSERT INTO users_goals 
         VALUES
-        ($1, $2, $3, $4, $5, $6, $7)
+        ($1, $2, $3)
+    `;
+  return dbConnection.query(query, [users_id, latitude, longitude]);
+};
+
+const insertUserData = (users_name, age, gender, experience, bio) => {
+  const query = `
+        INSERT INTO users
+        (users_name, age, gender, experience, bio)
+        VALUES
+        ($1, $2, $3, $4, $5)
         RETURNING
         users_id    
     `;
-    return dbConnection.query(query, [users_name, age, gender, location, experience, photo, bio])
+  return dbConnection
+    .query(query, [users_name, age, gender, experience, bio])
     .then(response => response.rows[0].users_id)
-    .catch(err => console.log(err))
-}
+    .catch(err => console.log(err));
+};
 
 module.exports = {
-    insertUserData,
-    insertUserGoals
+  insertUserData,
+  insertUserGoals,
+  insertUserLocation
 };
