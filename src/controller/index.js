@@ -14,10 +14,9 @@ const createUser = require('./createUser');
 
 const searchPage = require('./searchPage');
 
-const postUser = require('./postUserImage');
+const postUserImage = require('./postUserImage');
 
 const congratsPage = require("./congratsPage");
-const createProfilePage = require("./createProfilePage");
 const reportPage = require("./reportPage");
 
 
@@ -25,6 +24,7 @@ const reportPage = require("./reportPage");
 
 router.post('/locate', location.post); 
 router.post('/create-user', createUser.post);
+router.post('/user-image', postUserImage.post)
 
 
 //GET
@@ -32,7 +32,6 @@ router.get("/", splash.get);
 router.get("/conduct-page", conductPage.get);
 router.get("/sign-up", signup.get);
 router.get("/congrats-page", congratsPage.get);
-router.get("/create-profile-page", createProfilePage.get);
 router.get("/match-buddies-page", matchBuddiesPage.get);
 router.get("/report-page", reportPage.get);
 
@@ -43,7 +42,6 @@ router.post('/search-settings', (req, res, next) => {
     // res.redirect('/create-profile-page/');
 });
 
-router.get('/create-profile-page', createProfilePage.get);
 router.get('/search-page', searchPage.get); 
 
 router.use(error.client);

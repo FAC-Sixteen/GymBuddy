@@ -1,3 +1,3 @@
-const runDbBuild = require('db_build.js');
+const runDbBuild = require("./db_build.js");
 
 runDbBuild();

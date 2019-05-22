@@ -122,7 +122,8 @@
                 </div>
                 <div class="input-btn">
                     <label for="looking-to-begin">
-                        <input type="checkbox" id="looking-to-begin" form="signUp" value="looking-to-begin" name="goal"><span>looking to begin</span>
+                        <input type="checkbox" id="looking-to-begin" form="signUp" value="looking-to-begin"
+                            name="goal"><span>looking to begin</span>
                     </label>
                 </div>
             </section>
@@ -144,13 +145,13 @@
     </form>
 
 
-            <div class="container-center">
-                <button class="btn__arrow-right" type="submit" form="signUp">
-                    {{!-- <a class="" href="/create-profile-page"> --}}
-                        <img src="./assets/right-arrow.png" alt="arrow button to the right">
-                    {{!-- </a> --}}
-                </button>    
-            </div>
+    <div class="container-center">
+        <button class="btn__arrow-right" type="submit" form="signUp">
+            {{!-- <a class="" href="/create-profile-page"> --}}
+            <img src="./assets/right-arrow.png" alt="arrow button to the right">
+            {{!-- </a> --}}
+        </button>
+    </div>
 
     <div class="container-center">
         <button class="btn__arrow-right">
@@ -163,6 +164,13 @@
 </section>
 
 
+<form action="/user-image" method="POST" enctype="multipart/form-data">
+    <label for="upload-image">
+        <input type="file" name="Image" id="upload-image">
+    </label>
+    <button type="submit">submit image</button>
+</form>
+
 
 {{!-- 
     <section class="container-main">
@@ -171,20 +179,16 @@
             <img class="image__icon__avatar-profile" src="./assets/genderless_avatar.png" alt="gym buddy animation">
         </div>
         <span class="add">+</span>
+
+        <label for="upload-image">
+            <input type="file" accept="image/*" name="" id="upload-image">
+        </label>
+
     </div>
 
 
 
- <form class="create-profile-form" action="/create-profile" method="post">
-        <label for="upload-image">
-            <input type="file" accept="image/*" name="" id="upload-image">
-        </label>
-       
-        <label for="photos">
-            <textarea class="textarea-bio" id="photos" cols="38" rows="3" placeholder="+ PHOTOS" required></textarea>
-        </label>
-        <button type="submit">submit</button>
-    </form> 
+
 </section>  --}}
 
 
