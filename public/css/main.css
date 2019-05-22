@@ -483,6 +483,23 @@ template {
   background: white;
 }
 
+.btn__round-small {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  bottom: 5%;
+  right: 40;
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+  padding: var(--space-md) var(--space-md);
+  border: 2px solid var(--yellow);
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  background: white;
+}
 
 .collapsible {
   background-color: white;
@@ -521,24 +538,6 @@ template {
 .active:after {
   content: "\2796";
   /* Unicode character for "minus" sign (-) */
-
-.btn__round-small {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: absolute;
-  bottom: 5%;
-  right: 40;
-  white-space: nowrap;
-  text-decoration: none;
-  line-height: 1;
-  cursor: pointer;
-  padding: var(--space-md) var(--space-md);
-  border: 2px solid var(--yellow);
-  border-radius: var(--btn-radius);
-  font-size: var(--btn-font-size);
-  background: white;
-
 }
 
 .input-text {
@@ -887,6 +886,21 @@ template {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
+}
+
+.issue-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 12px;
+  row-gap: 12px;
 }
 
 .flex-body {

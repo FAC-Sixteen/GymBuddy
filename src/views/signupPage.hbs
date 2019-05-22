@@ -6,7 +6,9 @@
 
 
 <section class="container-main">
-    <form class="main-form" method="POST" action="create-user" form="signUp">
+
+    <form class="main-form" method="POST" action="/create-user" form="signUp">
+
         {{!-- page 1 --}}
         <div class="page-one">
             <label for="input-name">name:<br><br>
@@ -16,7 +18,7 @@
 
             <label for="input-age">age:<br><br>
                 <input class="input-text" type="text" value="" form="signUp" id="input-age" name="input-age"
-                    pattern="^[A-Za-z]+$" required><br>
+                    required><br>
             </label>
 
             <label for="input-gender">what best describes your gender:<br><br> </label>
@@ -46,7 +48,7 @@
             </section>
         </div>
 
-        <div class="page-two">
+        <div class="page-two"><br>
             <label for="input-gender">what time(s) work for you:<br><br> </label>
             <section class="basic-grid">
                 <div class="input-btn">
@@ -135,11 +137,11 @@
             <section class="basic-grid-gap">
                 <ul></ul>
             </section>
-            <label for="bio">About:<br><br>
-                <textarea class="textarea-bio" id="bio" cols="38" rows="5" placeholder="something about yourself..."
-                    required></textarea>
-            </label>
 
+            <label for="bio">About:<br><br>
+                <textarea class="textarea-bio" value="" name="text-bio" type="text" form="signUp" id="bio" cols="38" rows="5" placeholder="something about yourself..."
+                    pattern="^[A-Za-z]+$" required></textarea>
+            </label>
         </div>
         <button type="submit">create my profile</button>
     </form>
