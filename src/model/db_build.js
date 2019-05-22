@@ -6,11 +6,9 @@ const runDbBuild = () =>
   new Promise((resolve, reject) => {
     dbConnection.query(sql, (err, res) => {
       if (err) reject(err);
-      console.log("Gymbuddy table built");
 
       resolve(true);
     });
   });
-
 
 module.exports = runDbBuild;

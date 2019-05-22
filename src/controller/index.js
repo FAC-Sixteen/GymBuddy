@@ -15,7 +15,7 @@ const createUser = require('./createUser');
 
 const searchPage = require('./searchPage');
 
-const postUser = require('./postUserImage');
+const postUserImage = require('./postUserImage');
 
 
 const congratsPage = require("./congratsPage");
@@ -26,6 +26,7 @@ const reportPage = require("./reportPage");
 
 router.post('/locate', location.post); 
 router.post('/create-user', createUser.post);
+router.post('/user-image', postUserImage.post)
 
 
 //GET

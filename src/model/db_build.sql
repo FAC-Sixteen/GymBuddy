@@ -57,7 +57,7 @@ CREATE TABLE users_location
 );
 
 INSERT INTO users
-    (users_name, age, gender, location, experience, photo)
+    (users_name, age, gender, location, experience, photo, bio)
 VALUES
     ('Henry Stockdale', 25, 'Male', 'London', 'Beginner', '', 'hello' ),
     ('Ryan McAvoy', 28, 'Male', 'London', 'Beginner', '', 'hello'),
