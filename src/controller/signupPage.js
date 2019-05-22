@@ -1,3 +1,3 @@
-exports.get = (req, res) => {
-    res.render('signupPage', {layout: 'main'})
+exports.get = (req, res, next) => {
+  res.render("signupPage", { layout: "main" });
 };

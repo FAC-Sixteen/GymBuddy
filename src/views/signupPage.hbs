@@ -7,42 +7,41 @@
 
 <section class="container-main">
 
-    <form class="main-form" method="POST" action="/create-user" form="signUp">
+    <form class="main-form" method="POST" action="/create-user" id="signUp">
 
         {{!-- page 1 --}}
         <div class="page-one">
             <label for="input-name">name:<br><br>
-                <input class="input-text" type="text" value="" form="signUp" id="input-name" name="input-name"
+                <input class="input-text" type="text" value="" form="signUp" id="input-name" name="userName"
                     pattern="^[A-Za-z]+$" required><br>
             </label>
 
             <label for="input-age">age:<br><br>
-                <input class="input-text" type="text" value="" form="signUp" id="input-age" name="input-age"
-                    required><br>
+                <input class="input-text" type="text" value="" form="signUp" id="input-age" name="userAge" required><br>
             </label>
 
             <label for="input-gender">what best describes your gender:<br><br> </label>
             <section class="basic-grid">
                 <div class="input-btn">
                     <label for="woman">
-                        <input type="checkbox" id="woman" form="signUp" value="woman" name="woman"><span>woman</span>
+                        <input type="checkbox" id="woman" form="signUp" value="woman" name="gender"><span>woman</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="man">
-                        <input type="checkbox" id="man" form="signUp" value="man" name="man"><span>man</span>
+                        <input type="checkbox" id="man" form="signUp" value="man" name="gender"><span>man</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="pref-not-to-say">
                         <input type="checkbox" id="pref-not-to-say" form="signUp" value="pref-not-to-say"
-                            name="pref-not-to-say"><span>prefer not to say</span>
+                            name="gender"><span>prefer not to say</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="pref-not-to-self-des">
                         <input type="checkbox" id="pref-not-to-self-des" form="signUp" value="pref-not-to-self-des"
-                            name="pref-not-to-self-des"><span>self-describe</span>
+                            name="gender"><span>self-describe</span>
                     </label>
                 </div>
             </section>
@@ -106,26 +105,26 @@
             <section class="basic-grid">
                 <div class="input-btn">
                     <label for="keeping-fit">
-                        <input type="checkbox" id="keeping-fit" form="signUp" value="keeping-fit"
-                            name="goal"><span>keeping fit</span>
+                        <input type="checkbox" id="keeping-fit" form="signUp" value="1" name="goal"><span>keeping
+                            fit</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="building-muscle">
-                        <input type="checkbox" id="building-muscle" form="signUp" value="building-muscle"
-                            name="goal"><span>building muscle</span>
+                        <input type="checkbox" id="building-muscle" form="signUp" value="3" name="goal"><span>building
+                            muscle</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="losing-weight">
-                        <input type="checkbox" id="losing-weight" form="signUp" value="losing-weight"
-                            name="goal"><span>losing weight</span>
+                        <input type="checkbox" id="losing-weight" form="signUp" value="2" name="goal"><span>losing
+                            weight</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="looking-to-begin">
-                        <input type="checkbox" id="looking-to-begin" form="signUp" value="looking-to-begin"
-                            name="goal"><span>looking to begin</span>
+                        <input type="checkbox" id="looking-to-begin" form="signUp" value="4" name="goal"><span>looking
+                            to begin</span>
                     </label>
                 </div>
             </section>
@@ -139,8 +138,8 @@
             </section>
 
             <label for="bio">About:<br><br>
-                <textarea class="textarea-bio" value="" name="text-bio" type="text" form="signUp" id="bio" cols="38" rows="5" placeholder="something about yourself..."
-                    pattern="^[A-Za-z]+$" required></textarea>
+                <textarea class="textarea-bio" value="" name="userBio" type="text" form="signUp" id="bio" cols="38"
+                    rows="5" placeholder="something about yourself..." pattern="^[A-Za-z]+$" required></textarea>
             </label>
         </div>
         <button type="submit">create my profile</button>
@@ -166,12 +165,12 @@
 </section>
 
 
-<form action="/user-image" method="POST" enctype="multipart/form-data">
+{{!-- <form action="/user-image" method="POST" enctype="multipart/form-data">
     <label for="upload-image">
         <input type="file" name="Image" id="upload-image">
     </label>
     <button type="submit">submit image</button>
-</form>
+</form> --}}
 
 
 {{!-- 
@@ -196,4 +195,5 @@
 
 <footer class="footer">
     <script src="scripts/signupPage.js"></script>
+    <script src="scripts/location.js"></script>
 </footer>
