@@ -7,7 +7,7 @@
 
 <section class="container-main">
 
-    <form class="main-form" method="POST" action="/create-user" form="signUp">
+    <form class="main-form" method="POST" action="/create-user" id="signUp">
 
         {{!-- page 1 --}}
         <div class="page-one">
@@ -139,8 +139,8 @@
             </section>
 
             <label for="bio">About:<br><br>
-                <textarea class="textarea-bio" value="" name="text-bio" type="text" form="signUp" id="bio" cols="38" rows="5" placeholder="something about yourself..."
-                    pattern="^[A-Za-z]+$" required></textarea>
+                <textarea class="textarea-bio" value="" name="text-bio" type="text" form="signUp" id="bio" cols="38"
+                    rows="5" placeholder="something about yourself..." pattern="^[A-Za-z]+$" required></textarea>
             </label>
         </div>
         <button type="submit">create my profile</button>
