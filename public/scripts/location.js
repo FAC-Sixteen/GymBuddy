@@ -27,7 +27,6 @@ const locationError = error => {
 };
 
 window.onload = () => {
-  console.log("showingggggg");
   getCurrentLocation()
     .then(response => {
       fetch("/locate", {

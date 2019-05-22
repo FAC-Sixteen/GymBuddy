@@ -1,13 +1,15 @@
 // TODO
 // 1 - refactor into two separate queries
 // 2 - in the queries hgave if statement for user/goal existing
-
+const cookie = require("cookie");
 const insertData = require("../model/queries/insertData.js");
 const { insertUserData, insertUserGoals, insertUserLocation } = insertData;
 exports.post = (req, res) => {
   const { userName, userAge, gender, time, exp, goal, userBio } = req.body;
 
-  console.log(req.headers);
+  const cookieParse = cookie.parse(req.headers.cookie);
+
+  console.log(cookieParse);
 
   insertUserData(userName, userAge, gender, exp, userBio)
     .then(response => {
