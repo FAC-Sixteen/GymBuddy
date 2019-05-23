@@ -10,8 +10,8 @@ const returnMatchedUsers = (age, gender, experience) => {
       [age, gender, experience]
     )
     .then(response => {
-      console.log('returnMatchedUsers: ',response)
-      console.log('args: ', age, gender, experience)
+      console.log('returnMatchedUsers: ',response);
+      console.log('args: ', age, gender, experience);
       
       return response.rows;
     })

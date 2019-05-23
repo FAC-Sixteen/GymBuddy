@@ -49,9 +49,7 @@ const {
 console.log('req.query:', req.query)
   returnMatchedUsers(parseInt(agePref), genderPref, expPref)
   .then(response => {
-    console.log(response)
     res.render("matchBuddiesPage", {usersArr: response})
-    console.log(response)
   })
 });
 
