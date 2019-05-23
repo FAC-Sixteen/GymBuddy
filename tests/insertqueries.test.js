@@ -8,11 +8,6 @@ const getData = require("../src/model/queries/getData");
 //   runDbBuild();
 // });
 
-// beforeEach(() => {
-//   console.log("running: before");
-//   runDbBuild();
-// });
-
 const sum = (a, b) => {
   return a + b;
 };
