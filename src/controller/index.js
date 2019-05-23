@@ -35,16 +35,12 @@ router.get("/user-profile", userProfilePage.get);
 
 const { returnMatchedUsers } = require("../model/queries/getMatchUsers.js");
 router.get("/search-settings", (req, res, next) => {
-  // res.redirect("/match-buddies-page");
-
   const { agePref, distancePref, genderPref, expPref, goalPref } = req.query;
-
-  console.log("req.query:", req.query);
-  returnMatchedUsers(parseInt(agePref), genderPref, expPref).then(response => {
-    console.log(response);
-    res.render("matchBuddiesPage", { usersArr: response });
-    console.log(response);
-  });
+//   console.log('req.query:', req.query)
+  returnMatchedUsers(parseInt(agePref), genderPref, expPref)
+  .then(response => {
+    res.render("matchBuddiesPage", {usersArr: response})
+  })
 });
 
 router.get("/search-page", searchPage.get);
