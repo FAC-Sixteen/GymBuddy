@@ -3,15 +3,15 @@
 .slider {
   -webkit-appearance: none;
   width: 95%;
-  height: 15px;
-  background: white;
-  border: 2px solid var(--yellow);
+  height: 3px;
+  background: var(--grey);
+  // border: 2px solid var(--yellow);
   border-radius: var(--btn-radius);
   outline: none;
-  opacity: 0.7;
+  opacity: 1;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
-  padding: var(--space-xxs);
+  // padding: var(--space-xxs);
 }
 
 .slider::-webkit-slider-thumb {
@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-.page-two,
-.page-three {
-  display: none;
-}
+// .page-two,
+// .page-three {
+//   visibility: hidden;
+// }

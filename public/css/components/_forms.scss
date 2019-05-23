@@ -1,14 +1,17 @@
 // insert form layout
 
 .input-text {
-  border-radius: var(--btn-radius);
+  border: none;
+  border: 3px solid white;
+  border-radius: 100px;
+  margin-top: var(--space-xs);
   margin-bottom: var(--space-lg);
-  // border: 2px solid var(--yellow);
   padding-left: var(--space-xs);
-  width: 100%;
+  width: 75%;
 }
 
 .input-text:focus {
+  outline: none;
   border: 3px solid var(--yellow);
 }
 
@@ -50,10 +53,11 @@
   border: none;
   max-width: 100vw;
   height: 200px;
-  // border: 2px solid var(--yellow);
+  border: 3px solid white;
   border-radius: var(--btn-radius);
 }
 
 .textarea-bio:focus {
+  outline: none;
   border: 3px solid var(--yellow);
 }

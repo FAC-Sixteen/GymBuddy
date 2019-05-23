@@ -52,6 +52,11 @@
   border: 2px solid var(--yellow);
 }
 
+.btn__round-submit:focus {
+  outline: none;
+  background: var(--yellow);
+}
+
 a {
   text-decoration: none;
 }
@@ -61,11 +66,18 @@ a {
   border-radius: 100px;
   border: none;
   width: 200px;
-  height: 49px;
+  height: 50px;
+  display: flex;
+  padding-left: 40px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
+}
+
+.splash-button:focus {
+  outline: none;
+  background-color: var(--grey-light);
 }
 
 .splash-arrow {
-  display: inline;
+  padding-left: 30px;
 }
