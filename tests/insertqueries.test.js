@@ -1,3 +1,4 @@
+require("env2")("./config.env");
 const runDbBuild = require("../src/model/db_build");
 const postData = require("../src/model/queries/insertData");
 const getData = require("../src/model/queries/getData");
