@@ -3,7 +3,7 @@
 // 2 - in the queries hgave if statement for user/goal existing
 const cookie = require("cookie");
 const uploadImage = require("./uploadImage");
-const singleUpload = uploadImage.single("Image");
+// const singleUpload = uploadImage.single("Image");
 const insertData = require("../model/queries/insertData.js");
 const { insertUserData, insertUserGoals, insertUserLocation } = insertData;
 
@@ -17,13 +17,6 @@ exports.post = (req, res) => {
 
   insertUserData(userName, userAge, gender, exp, userBio)
     .then(response => {
-      singleUpload(req, res, (err, some) => {
-        if (err) {
-          console.log(err);
-        }
-        console.log(req.file);
-      });
-
       insertUserLocation(response, cookieObj.latitude, cookieObj.longitude);
 
       if (!Array.isArray(goal)) {
