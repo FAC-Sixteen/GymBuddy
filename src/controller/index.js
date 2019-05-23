@@ -22,7 +22,6 @@ const reportPage = require("./reportPage");
 
 router.post("/locate", location.post);
 router.post("/create-user", createUser.post);
-router.post("/user-image", postUserImage.post);
 
 //GET
 router.get("/", splash.get);
