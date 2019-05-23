@@ -19,9 +19,7 @@ CREATE TABLE users
     users_name VARCHAR(50) NOT NULL,
     age INT NOT NULL,
     gender TEXT NOT NULL,
-    location TEXT NOT NULL,
     experience TEXT NOT NULL,
-    photo TEXT NOT NULL,
     bio TEXT NOT NULL
 );
 
@@ -52,17 +50,17 @@ CREATE TABLE users_time
 CREATE TABLE users_location
 (
     users_id INTEGER REFERENCES users(users_id),
-    latitude INTEGER,
-    longitude INTEGER
+    latitude DECIMAL,
+    longitude DECIMAL
 );
 
 INSERT INTO users
-    (users_name, age, gender, location, experience, photo, bio)
+    (users_name, age, gender, experience, bio)
 VALUES
-    ('Henry Stockdale', 25, 'Male', 'London', 'Beginner', '', 'hello' ),
-    ('Ryan McAvoy', 28, 'Male', 'London', 'Beginner', '', 'hello'),
-    ('Banna Teklebrhan', 29, 'Female', 'London', 'Beginner', '', 'hello'),
-    ('Dylan Almano', 27, 'Male', 'London', 'Beginner', '', 'hello');
+    ('Henry Stockdale', 25, 'Male', 'Beginner', 'hello' ),
+    ('Ryan McAvoy', 28, 'Male', 'Beginner', 'hello'),
+    ('Banna Teklebrhan', 29, 'Female', 'Beginner', 'hello'),
+    ('Dylan Almano', 27, 'Male', 'Beginner', 'hello');
 
 INSERT INTO goals
     (goals_name)
@@ -70,7 +68,8 @@ VALUES
     ('Keeping Fit'),
     ('Lose Weight'),
     ('Build Muscle'),
-    ('Sport Specific');
+    ('Looking to begin');
+
 
 INSERT INTO time
     (time_name)
@@ -81,8 +80,8 @@ VALUES
     ('Flexible');
 
 INSERT INTO users_goals
-(users_id, goals_id)
-VALUES 
+    (users_id, goals_id)
+VALUES
     (1, 2),
     (1, 4),
     (2, 1),
@@ -93,7 +92,7 @@ VALUES
     (4, 1);
 
 INSERT INTO users_time
-(users_id, time_id)
+    (users_id, time_id)
 VALUES
     (1, 2),
     (1, 4),
@@ -103,5 +102,13 @@ VALUES
     (3, 4),
     (4, 2),
     (4, 1);
+
+INSERT INTO users_location
+    (users_id, latitude, longitude)
+VALUES
+    (1, 51.56755570000001, -0.1058971),
+    (2, 51.563311399999996, -0.1078787),
+    (3, 51.56463, -0.10588),
+    (4, 51.56239, -0.10046);
 
 COMMIT;
