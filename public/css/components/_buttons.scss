@@ -42,3 +42,30 @@
   // color: var(--color-link);
   background: white;
 }
+
+.btn__round-submit {
+  background: white;
+  border-radius: 100px;
+  border: none;
+  width: 150px;
+  height: 49px;
+  border: 2px solid var(--yellow);
+}
+
+a {
+  text-decoration: none;
+}
+
+.splash-button {
+  background: white;
+  border-radius: 100px;
+  border: none;
+  width: 200px;
+  height: 49px;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-arrow {
+  display: inline;
+}

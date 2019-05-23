@@ -1,11 +1,11 @@
 //splash
 
-const buttonRightArrow = document.querySelector(".btn__arrow-right");
+const button = document.querySelector(".splash-button");
 
-buttonRightArrow.style.visibility = "hidden";
+button.style.visibility = "hidden";
 
 const displayButton = () => {
-  setTimeout(() => (buttonRightArrow.style.visibility = "visible"), 2000);
+  setTimeout(() => (button.style.visibility = "visible"), 2000);
 };
 
 window.onload = displayButton();
