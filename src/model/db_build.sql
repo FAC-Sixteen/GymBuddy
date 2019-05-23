@@ -50,8 +50,8 @@ CREATE TABLE users_time
 CREATE TABLE users_location
 (
     users_id INTEGER REFERENCES users(users_id),
-    latitude INTEGER,
-    longitude INTEGER
+    latitude DECIMAL,
+    longitude DECIMAL
 );
 
 INSERT INTO users

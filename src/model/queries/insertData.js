@@ -11,7 +11,7 @@ const insertUserGoals = (users_id, goal_id) => {
 
 const insertUserLocation = (users_id, latitude, longitude) => {
   const query = `
-        INSERT INTO users_goals 
+        INSERT INTO users_location 
         VALUES
         ($1, $2, $3)
     `;
