@@ -31,7 +31,6 @@ router.get("/sign-up", signup.get);
 router.get("/congrats-page", congratsPage.get);
 router.get("/match-buddies-page", matchBuddiesPage.get);
 router.get("/report-page", reportPage.get);
-router.get("/user-profile", userProfilePage.get);
 
 const { returnMatchedUsers } = require("../model/queries/getMatchUsers.js");
 router.get("/search-settings", (req, res, next) => {
