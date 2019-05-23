@@ -8,3 +8,12 @@
   padding: var(--space-xs);
   color: var(--yellow);
 }
+
+.splash-header {
+  z-index: 1;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-xs);
+  color: var(--yellow);
+}

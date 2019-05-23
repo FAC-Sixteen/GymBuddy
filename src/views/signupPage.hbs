@@ -13,10 +13,10 @@
         <div class="page-one">
             <label for="input-name">name<br><br>
                 <input class="input-text" type="text" value="" form="signUp" id="input-name" name="userName"
-                    pattern="^[A-Za-z]+$" required><br>
+                    pattern="^[a-z]+$" required><br>
             </label>
 
-            <label for="input-age">age<br><br>
+            <label for="input-age" pattern="^[a-z]+$" required>age<br><br>
                 <input class="input-text" type="text" value="" form="signUp" id="input-age" name="userAge" required><br>
             </label>
 
@@ -24,31 +24,33 @@
             <section class="basic-grid">
                 <div class="input-btn">
                     <label for="woman">
-                        <input type="checkbox" id="woman" form="signUp" value="woman" name="gender"><span>woman</span>
+                        <input class="btn-onclick" type="checkbox" id="woman" form="signUp" value="woman"
+                            name="gender"><span>woman</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="man">
-                        <input type="checkbox" id="man" form="signUp" value="man" name="gender"><span>man</span>
+                        <input class="btn-onclick" type="checkbox" id="man" form="signUp" value="man"
+                            name="gender"><span>man</span>
                     </label>
                 </div>
                 <div class="input-btn">
                     <label for="pref-not-to-say">
-                        <input type="checkbox" id="pref-not-to-say" form="signUp" value="pref-not-to-say"
-                            name="gender"><span>prefer not to say</span>
+                        <input class="btn-onclick" type="checkbox" id="pref-not-to-say" form="signUp"
+                            value="pref-not-to-say" name="gender"><span>prefer not to say</span>
                     </label>
                 </div>
-                <div class="input-btn">
+                {{!-- <div class="input-btn">
                     <label for="pref-not-to-self-des">
-                        <input type="checkbox" id="pref-not-to-self-des" form="signUp" value="pref-not-to-self-des"
-                            name="gender"><span>self-describe</span>
+                        <input class="btn-onclick" type="checkbox" id="pref-not-to-self-des" form="signUp"
+                            value="pref-not-to-self-des" name="gender"><span>self-describe</span>
                     </label>
-                </div>
+                </div> --}}
             </section>
         </div>
 
-        <div class="page-two container-hide"><br>
-            <label for="input-gender">what time(s) work for you?<br><br> </label>
+        <div class="page-two"><br>
+            {{!-- <label for="input-gender">what time(s) work for you?<br><br> </label>
             <section class="basic-grid">
                 <div class="input-btn">
                     <label for="morning">
@@ -74,7 +76,7 @@
                             name="time"><span>flexible</span>
                     </label>
                 </div>
-            </section>
+            </section> --}}
 
 
             {{!-- naughty me using brs for spacing -todo fixthis --}}
@@ -101,7 +103,7 @@
 
             </section>
 
-            <label for="input-time"> <br>please pick at least one goal:<br><br> </label>
+            <label for="input-time"> <br>please pick at least one goal<br><br> </label>
             <section class="basic-grid">
                 <div class="input-btn">
                     <label for="keeping-fit">
@@ -130,53 +132,47 @@
             </section>
         </div>
 
-        <div class="page-three container-hide">
+        <div class="page-three">
 
-            <h4 class="dom-name">Josephine Bloggs</h4>
+            <h4 class="dom-name"></h4>
             <section class="basic-grid-gap">
                 <ul></ul>
             </section>
 
 
-            {{!-- <div class="circle"></div> --}}
-            <img id="preview-image" class="image__icon__avatar-profile" src="./assets/genderless_avatar.png"
+
+            {{!-- <img id="preview-image" class="image__icon__avatar-profile" src="./assets/genderless_avatar.png"
                 alt="placeholder image">
-            {{!-- </div> --}}
             <span class="add">+</span>
             <form enctype="multipart/form-data">
                 <label for="upload-image">
                     upload an image <input type="file" name="Image" id="upload-image">
                 </label>
-            </form>
+            </form> --}}
 
-            <label for="bio">About:<br><br>
-                <textarea class="textarea-bio" value="" name="userBio" type="text" form="signUp" id="bio" cols="38"
-                    rows="5" placeholder="something about yourself..." pattern="^[A-Za-z]+$" required></textarea>
+            <label for="bio">Say something about yourself...<br><br>
+                <textarea class="textarea-bio" value="" name="userBio" type="text" form="signUp" id="bio" cols="40"
+                    placeholder="" pattern="^[A-Za-z]+$" required></textarea>
             </label>
-
-            <button type="submit">create my profile</button>
         </div>
 
-
+        <div class="container-center">
+            <button id="back-button" class="btn__arrow-right">
+                {{!-- <a class="" href="/create-profile-page"> --}}
+                <img src="./assets/left-arrow-back.png" alt="arrow button to the right">
+                {{!-- </a> --}}
+            </button>
+            <button class="btn__round-submit" id="create-profile-button" type="submit">create my profile</button>
+            <button id="next-button" class="btn__arrow-right">
+                {{!-- <a href="/conduct-page"> --}}
+                <img src="./assets/right-arrow-next.png" alt="arrow button to the right">
+                {{!-- </a> --}}
+            </button>
+        </div>
 
     </form>
 
 
-    <div class="container-center">
-        <button id="back-button" class="btn__arrow-right">
-            {{!-- <a class="" href="/create-profile-page"> --}}
-            <img src="./assets/left-arrow-back.png" alt="arrow button to the right">
-            {{!-- </a> --}}
-        </button>
-    </div>
-
-    <div class="container-center">
-        <button id="next-button" class="btn__arrow-right">
-            {{!-- <a href="/conduct-page"> --}}
-            <img src="./assets/right-arrow-next.png" alt="arrow button to the right">
-            {{!-- </a> --}}
-        </button>
-    </div>
 
 </section>
 
@@ -208,6 +204,6 @@
 
 <footer class="footer">
     <script src="scripts/formSlider.js"></script>
-    <script src="scripts/signupPage.js"></script>
-    <script src="scripts/imageReader.js"></script>
+    {{!-- <script src="scripts/signupPage.js"></script> --}}
+    {{!-- <script src="scripts/imageReader.js"></script> --}}
 </footer>

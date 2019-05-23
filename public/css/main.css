@@ -511,6 +511,37 @@ template {
   background: white;
 }
 
+.btn__round-submit {
+  background: white;
+  border-radius: 100px;
+  border: none;
+  width: 150px;
+  height: 49px;
+  border: 2px solid var(--yellow);
+}
+
+a {
+  text-decoration: none;
+}
+
+.splash-button {
+  background: white;
+  border-radius: 100px;
+  border: none;
+  width: 200px;
+  height: 49px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.splash-arrow {
+  display: inline;
+}
+
 .collapsible {
   background-color: white;
   color: black;
@@ -553,9 +584,12 @@ template {
 .input-text {
   border-radius: var(--btn-radius);
   margin-bottom: var(--space-lg);
-  border: 2px solid var(--yellow);
   padding-left: var(--space-xs);
-  width: 75%;
+  width: 100%;
+}
+
+.input-text:focus {
+  border: 3px solid var(--yellow);
 }
 
 .input-btn {
@@ -563,8 +597,7 @@ template {
   white-space: nowrap;
   text-decoration: none;
   line-height: 1;
-  border: 2px solid var(--yellow);
-  border-radius: var(--btn-radius);
+  border-radius: 100px;
   background: white;
   margin: var(--space-xxxs);
   overflow: auto;
@@ -590,17 +623,26 @@ template {
 }
 
 .input-btn label input:checked + span {
-  background-color: var(--grey);
+  border-radius: 100px;
+  border: 2px solid var(--yellow);
+  background-color: var(--yellow);
 }
 
 .textarea-bio {
   resize: none;
-  max-width: 100%;
-  max-height: 100%;
-  border: 2px solid var(--yellow);
+  border: none;
+  max-width: 100vw;
+  height: 200px;
   border-radius: var(--btn-radius);
 }
 
+<<<<<<< HEAD
+.textarea-bio:focus {
+  border: 3px solid var(--yellow);
+}
+
+=======
+>>>>>>> master
 .auto-grid::before, .auto-grid::after {
   content: '';
   display: table;
@@ -782,10 +824,14 @@ template {
 }
 
 .image-splash {
+  z-index: -1;
   height: auto;
   width: 24em;
+<<<<<<< HEAD
+=======
   -o-object-fit: contain;
      object-fit: contain;
+>>>>>>> master
 }
 
 .image__icon__avatar-profile {
@@ -942,6 +988,11 @@ template {
   cursor: pointer;
 }
 
+.page-two,
+.page-three {
+  display: none;
+}
+
 .text-coc {
   padding: var(--space-md);
 }
@@ -994,6 +1045,14 @@ template {
   row-gap: 12px;
 }
 
+body {
+  background: #feefea;
+}
+
+.container-splash {
+  height: 100%;
+}
+
 .flex-body {
   margin: 0;
   display: -webkit-box;
@@ -1039,4 +1098,20 @@ template {
   padding: var(--space-xs);
   color: var(--yellow);
 }
+<<<<<<< HEAD
+
+.splash-header {
+  z-index: 1;
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: var(--space-xs);
+  color: var(--yellow);
+}
+=======
+>>>>>>> master
 /*# sourceMappingURL=main.css.map */
