@@ -1,10 +1,7 @@
 language: node_js
 node_js:
   - "node"
-env:
-  - NODE_ENV=test
-services:
-  - postgresql
-before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
-script: npm test
+
+script:
+  - npm test
+  # - npm run coverage

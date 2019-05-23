@@ -3,15 +3,15 @@ const runDbBuild = require("../src/model/db_build");
 const postData = require("../src/model/queries/insertData");
 const getData = require("../src/model/queries/getData");
 
-// beforeAll(() => {
-//   console.log("running: beforeAll");
-//   runDbBuild();
-// });
-
-beforeEach(() => {
-  console.log("running: before");
+beforeAll(() => {
+  console.log("running: beforeAll");
   runDbBuild();
 });
+
+// beforeEach(() => {
+//   console.log("running: before");
+//   runDbBuild();
+// });
 
 // const sum = (a, b) => {
 //   return a + b;
