@@ -1,14 +1,17 @@
 const db = require("../db_connections")
 
+
+// SELECT * FROM users LEFT JOIN users_goals ON users.users_id = users_goals.users_id WHERE (users.age, users.gender, users.experience) = ($1, $2, $3)
+
 const returnMatchedUsers = (age, gender, experience) => {
   return db
     .query(
-      "SELECT * FROM users LEFT JOIN users_goals ON users.users_id = users_goals.users_id WHERE (users.age, users.gender, users.experience) = ($1, $2, $3)",
+      "SELECT * FROM (SELECT * FROM users LEFT JOIN users_goals ON users.users_id = users_goals.users_id WHERE (users.age, users.gender, users.experience) =($1, $2, $3)) q1 INNER JOIN goals ON q1.goals_id = goals.goals_id",
       [age, gender, experience]
     )
     .then(response => {
-      console.log('returnMatchedUsers: ',response)
-      console.log('args: ', age, gender, experience)
+      console.log('returnMatchedUsers: ',response);
+      console.log('args: ', age, gender, experience);
       
       return response.rows;
     })
