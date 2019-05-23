@@ -6,6 +6,7 @@ const splash = require("./splashPage");
 const conductPage = require("./conductPage");
 const signup = require("./signupPage");
 const matchBuddiesPage = require("./matchBuddiesPage");
+// const userProfilePage = require("./userProfilePage");
 
 const location = require("./location");
 
@@ -30,23 +31,12 @@ router.get("/sign-up", signup.get);
 router.get("/congrats-page", congratsPage.get);
 router.get("/match-buddies-page", matchBuddiesPage.get);
 router.get("/report-page", reportPage.get);
+router.get("/user-profile", userProfilePage.get);
 
-const {returnMatchedUsers} = require('../model/queries/getMatchUsers.js');
+const { returnMatchedUsers } = require("../model/queries/getMatchUsers.js");
 router.get("/search-settings", (req, res, next) => {
-  // res.redirect("/match-buddies-page");
-
-const {
-  agePref,
-  distancePref,
-  genderPref,
-  expPref,
-  goalPref
-} = req.query;
-
-
-
-
-console.log('req.query:', req.query)
+  const { agePref, distancePref, genderPref, expPref, goalPref } = req.query;
+//   console.log('req.query:', req.query)
   returnMatchedUsers(parseInt(agePref), genderPref, expPref)
   .then(response => {
     res.render("matchBuddiesPage", {usersArr: response})
