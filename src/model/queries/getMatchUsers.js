@@ -1,26 +1,24 @@
-const db = require("../db_connections");
+const db = require("../db_connections")
 
-const getData = () => {
-  return db
-    .query("SELECT * FROM users")
-    .then(response => {
-      return response.rows;
-    })
-    .catch(err => console.log(err));
-};
 
-const returnMatchedUsers = (age, gender, location, experience) => {
+// SELECT * FROM users LEFT JOIN users_goals ON users.users_id = users_goals.users_id WHERE (users.age, users.gender, users.experience) = ($1, $2, $3)
+
+const returnMatchedUsers = (age, gender, experience) => {
   return db
     .query(
-      "SELECT * FROM users WHERE (age, gender, location, experience) = ($1, $2, $3, $4)",
-      [age, gender, location, experience]
+      "SELECT * FROM (SELECT * FROM users LEFT JOIN users_goals ON users.users_id = users_goals.users_id WHERE (users.age, users.gender, users.experience) =($1, $2, $3)) q1 INNER JOIN goals ON q1.goals_id = goals.goals_id",
+      [age, gender, experience]
     )
     .then(response => {
+      console.log('returnMatchedUsers: ',response);
+      console.log('args: ', age, gender, experience);
+      
       return response.rows;
     })
     .catch(err => console.log(err));
 };
 
+//add goals param
 const returnUserAndAllGoals = userID => {
   return db
     .query("SELECT * FROM users_goals WHERE (users_id) = ($1)", [userID])
@@ -39,8 +37,8 @@ const returnUserAndAllTimes = userID => {
     .catch(err => console.log(err));
 };
 
+
 module.exports = {
-  getData,
   returnMatchedUsers,
   returnUserAndAllGoals,
   returnUserAndAllTimes

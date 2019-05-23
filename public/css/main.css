@@ -636,10 +636,13 @@ a {
   border-radius: var(--btn-radius);
 }
 
+<<<<<<< HEAD
 .textarea-bio:focus {
   border: 3px solid var(--yellow);
 }
 
+=======
+>>>>>>> master
 .auto-grid::before, .auto-grid::after {
   content: '';
   display: table;
@@ -824,6 +827,11 @@ a {
   z-index: -1;
   height: auto;
   width: 24em;
+<<<<<<< HEAD
+=======
+  -o-object-fit: contain;
+     object-fit: contain;
+>>>>>>> master
 }
 
 .image__icon__avatar-profile {
@@ -866,6 +874,87 @@ a {
   padding-bottom: var(--space-xl);
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #feefea;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #feefea;
+  color: white;
+}
+
 .slider {
   -webkit-appearance: none;
   width: 95%;
@@ -875,9 +964,9 @@ a {
   border-radius: var(--btn-radius);
   outline: none;
   opacity: 0.7;
-  -webkit-transition: 0.2s;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  -webkit-transition: .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
   padding: var(--space-xxs);
 }
 
@@ -1009,6 +1098,7 @@ body {
   padding: var(--space-xs);
   color: var(--yellow);
 }
+<<<<<<< HEAD
 
 .splash-header {
   z-index: 1;
@@ -1022,4 +1112,6 @@ body {
   padding: var(--space-xs);
   color: var(--yellow);
 }
+=======
+>>>>>>> master
 /*# sourceMappingURL=main.css.map */

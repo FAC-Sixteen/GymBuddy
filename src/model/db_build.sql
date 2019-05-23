@@ -57,10 +57,10 @@ CREATE TABLE users_location
 INSERT INTO users
     (users_name, age, gender, experience, bio)
 VALUES
-    ('Henry Stockdale', 25, 'Male', 'Beginner', 'hello' ),
-    ('Ryan McAvoy', 28, 'Male', 'Beginner', 'hello'),
-    ('Banna Teklebrhan', 29, 'Female', 'Beginner', 'hello'),
-    ('Dylan Almano', 27, 'Male', 'Beginner', 'hello');
+    ('Henry Stockdale', 25, 'man', 'Beginner', 'hello' ),
+    ('Ryan McAvoy', 28, 'man', 'Beginner', 'hello'),
+    ('Banna Teklebrhan', 29, 'woman', 'Beginner', 'hello'),
+    ('Dylan Almano', 27, 'man', 'Beginner', 'hello');
 
 INSERT INTO goals
     (goals_name)

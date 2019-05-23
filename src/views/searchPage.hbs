@@ -6,7 +6,7 @@
 
 <section class="container-main">
     <h4>I would like my buddy to be...</h4>
-    <form class ="form-main" id= "searchPrefs" action="/search-settings" method="POST">
+    <form class ="form-main" id= "searchPrefs" action="/search-settings" method="GET">
         <div class="container-main">
             <label for="ageRange"><p>age: <span class="age-reading">0</span></p>
                     <input class = "slider"  type="range" min="18" max="100" value="" id="ageRange" name="agePref" form="searchPrefs">
@@ -48,18 +48,18 @@
             <h5 class="exp container-hide">exp:</h5>
             <section class="basic-grid container-hide exp">      
                 <div class="input-btn">
-                    <label for="beginner">
-                        <input type="checkbox" id="beginner" form="searchPrefs" value="beginner" name="expPref"><span>beginner</span>
+                    <label for="Beginner">
+                        <input type="checkbox" id="Beginner" form="searchPrefs" value="Beginner" name="expPref"><span>beginner</span>
                     </label>
                 </div>
                 <div class="input-btn">
-                    <label for="intermediate">
-                        <input type="checkbox" id="intermediate" form="searchPrefs" value="intermediate" name="expPref"><span>intermediate</span>
+                    <label for="Intermediate">
+                        <input type="checkbox" id="Intermediate" form="searchPrefs" value="Intermediate" name="expPref"><span>intermediate</span>
                     </label>
                 </div>    
                 <div class="input-btn">
-                    <label for="advanced">
-                        <input type="checkbox" id="advanced" form="searchPrefs" value="advanced" name="expPref"><span>advanced</span>
+                    <label for="Advanced">
+                        <input type="checkbox" id="Advanced" form="searchPrefs" value="Advanced" name="expPref"><span>advanced</span>
                     </label>
                 </div>                
             </section>
@@ -68,8 +68,8 @@
         <h5 class="goals container-hide">Goals:</h5>
            <section class="basic-grid container-hide goals">      
                 <div class="input-btn">
-                    <label for="keeping-fit">
-                        <input type="checkbox" id="keeping-fit" form="searchPrefs" value="keeping-fit" name="goalPref"><span>keeping fit</span>
+                    <label for="Keeping Fit">
+                        <input type="checkbox" id="Keeping Fit" form="searchPrefs" value="Keeping Fit" name="goalPref"><span>keeping fit</span>
                     </label>
                 </div>
                 <div class="input-btn">
