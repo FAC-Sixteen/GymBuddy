@@ -844,7 +844,7 @@ template {
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #ffd137;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
@@ -896,7 +896,7 @@ template {
 .modal-header {
   padding: 2px 16px;
   background-color: #feefea;
-  color: white;
+  color: black;
 }
 
 .modal-body {
@@ -906,7 +906,7 @@ template {
 .modal-footer {
   padding: 2px 16px;
   background-color: #feefea;
-  color: white;
+  color: black;
 }
 
 .slider {
