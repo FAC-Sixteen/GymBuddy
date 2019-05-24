@@ -3,8 +3,8 @@ const nextButton = document.getElementById("next-button");
 const createProfileButton = document.getElementById("create-profile-button");
 
 const first = document.querySelector(".page-one");
-const second = document.querySelector(".page-two");
-const third = document.querySelector(".page-three");
+const second = document.getElementById("page_two");
+const third = document.getElementById("page_three");
 
 backButton.style.visibility = "hidden";
 createProfileButton.style.visibility = "hidden";
@@ -39,8 +39,8 @@ const showSlides = n => {
   }
 
   slides.forEach(x => {
-    x.style.display = "none";
+    x.classList.add = "container-hide";
   });
 
-  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.remove = "container-hide";
 };
