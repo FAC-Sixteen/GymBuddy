@@ -37,3 +37,18 @@
 //   margin: 10px;
 //   margin-top: 1rem;
 // }
+
+body {
+  background: #feefea;
+}
+
+.container-splash {
+  height: 100%;
+}
+
+.splash-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

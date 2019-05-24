@@ -25,7 +25,7 @@
   --yellow: #ffd600;
   --pink: #feefea;
   --orange: #f8c537;
-  --grey: #c4c4c4;
+  --grey: #a3a2a2;
   --grey-light: #e5e5e5;
   --green: #88c459;
   --red: #f94747;
@@ -511,6 +511,49 @@ template {
   background: white;
 }
 
+.btn__round-submit {
+  background: white;
+  border-radius: 100px;
+  border: none;
+  width: 150px;
+  height: 49px;
+  border: 2px solid var(--yellow);
+}
+
+.btn__round-submit:focus {
+  outline: none;
+  background: var(--yellow);
+}
+
+a {
+  text-decoration: none;
+}
+
+.splash-button {
+  background: white;
+  border-radius: 100px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.splash-button:focus {
+  outline: none;
+  background-color: var(--grey-light);
+}
+
+.splash-arrow {
+  padding-left: 30px;
+}
+
 .collapsible {
   background-color: white;
   color: black;
@@ -551,11 +594,18 @@ template {
 }
 
 .input-text {
-  border-radius: var(--btn-radius);
+  border: none;
+  border: 3px solid white;
+  border-radius: 100px;
+  margin-top: var(--space-xs);
   margin-bottom: var(--space-lg);
-  border: 2px solid var(--yellow);
   padding-left: var(--space-xs);
   width: 75%;
+}
+
+.input-text:focus {
+  outline: none;
+  border: 3px solid var(--yellow);
 }
 
 .input-btn {
@@ -563,8 +613,7 @@ template {
   white-space: nowrap;
   text-decoration: none;
   line-height: 1;
-  border: 2px solid var(--yellow);
-  border-radius: var(--btn-radius);
+  border-radius: 100px;
   background: white;
   margin: var(--space-xxxs);
   overflow: auto;
@@ -590,15 +639,23 @@ template {
 }
 
 .input-btn label input:checked + span {
-  background-color: var(--grey);
+  border-radius: 100px;
+  border: 2px solid var(--yellow);
+  background-color: var(--yellow);
 }
 
 .textarea-bio {
   resize: none;
-  max-width: 100%;
-  max-height: 100%;
-  border: 2px solid var(--yellow);
+  border: none;
+  max-width: 100vw;
+  height: 200px;
+  border: 3px solid white;
   border-radius: var(--btn-radius);
+}
+
+.textarea-bio:focus {
+  outline: none;
+  border: 3px solid var(--yellow);
 }
 
 .auto-grid::before, .auto-grid::after {
@@ -782,10 +839,13 @@ template {
 }
 
 .image-splash {
+  z-index: -1;
   height: auto;
   width: 24em;
-  -o-object-fit: contain;
-     object-fit: contain;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 35%;
+  top: 5%;
 }
 
 .image__icon__avatar-profile {
@@ -912,16 +972,14 @@ template {
 .slider {
   -webkit-appearance: none;
   width: 95%;
-  height: 15px;
-  background: white;
-  border: 2px solid var(--yellow);
+  height: 3px;
+  background: var(--grey);
   border-radius: var(--btn-radius);
   outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  -webkit-transition: opacity .2s;
-  transition: opacity .2s;
-  padding: var(--space-xxs);
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 .slider::-webkit-slider-thumb {
@@ -994,6 +1052,28 @@ template {
   row-gap: 12px;
 }
 
+body {
+  background: #feefea;
+}
+
+.container-splash {
+  height: 100%;
+}
+
+.splash-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .flex-body {
   margin: 0;
   display: -webkit-box;
@@ -1025,7 +1105,21 @@ template {
   color: var(--yellow);
 }
 
+.splash-header {
+  z-index: 1;
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: var(--space-xs);
+  color: var(--yellow);
+}
+
 .header {
+  font-family: Questrial;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1037,6 +1131,20 @@ template {
           align-items: center;
   background-color: var(--pink);
   padding: var(--space-xs);
+  padding-bottom: 0;
+  margin: 0;
   color: var(--yellow);
+}
+
+.header-text {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.splash-text {
+  position: absolute;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 200px;
 }
 /*# sourceMappingURL=main.css.map */

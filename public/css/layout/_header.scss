@@ -1,10 +1,33 @@
 // insert header layout
+.splash-header {
+  z-index: 1;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-xs);
+  color: var(--yellow);
+}
 
 .header {
+  font-family: Questrial;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--pink);
   padding: var(--space-xs);
+  padding-bottom: 0;
+  margin: 0;
   color: var(--yellow);
+}
+
+.header-text {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.splash-text {
+  position: absolute;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-top: 200px;
 }

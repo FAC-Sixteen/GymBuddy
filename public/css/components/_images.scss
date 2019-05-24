@@ -1,7 +1,10 @@
 .image-splash {
+  z-index: -1;
   height: auto;
   width: 24em;
-  object-fit: contain;
+  position: sticky;
+  left: 35%;
+  top: 5%;
 }
 
 .image__icon__avatar-profile {

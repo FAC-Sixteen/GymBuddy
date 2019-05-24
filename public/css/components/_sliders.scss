@@ -1,33 +1,38 @@
 // insert sliders style
 
 .slider {
-    -webkit-appearance: none;
-    width: 95%;
-    height: 15px;  
-    background: white;
-    border: 2px solid var(--yellow);
-    border-radius: var(--btn-radius);
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    padding: var(--space-xxs);
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%; 
-    background: var(--orange);
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background:var(--orange);
-    cursor: pointer;
-  }
+  -webkit-appearance: none;
+  width: 95%;
+  height: 3px;
+  background: var(--grey);
+  // border: 2px solid var(--yellow);
+  border-radius: var(--btn-radius);
+  outline: none;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  // padding: var(--space-xxs);
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--orange);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--orange);
+  cursor: pointer;
+}
+
+// .page-two,
+// .page-three {
+//   visibility: hidden;
+// }
