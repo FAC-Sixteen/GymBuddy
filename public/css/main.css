@@ -904,7 +904,7 @@ a {
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #ffd137;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
@@ -956,7 +956,7 @@ a {
 .modal-header {
   padding: 2px 16px;
   background-color: #feefea;
-  color: white;
+  color: black;
 }
 
 .modal-body {
@@ -966,7 +966,7 @@ a {
 .modal-footer {
   padding: 2px 16px;
   background-color: #feefea;
-  color: white;
+  color: black;
 }
 
 .slider {

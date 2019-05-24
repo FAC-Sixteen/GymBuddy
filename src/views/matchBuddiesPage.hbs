@@ -1,11 +1,11 @@
 <div class="container-main">
     <h1 class="sub-title">Search</h1>
     <p class="main-paragraph">Here is a list of buddies, based on your search preferences</p>
-       {{#each usersArr}}
+    {{#each usersArr}}
 
     {{> matchedBuddy profile=this}}
-        
-        {{else}}
-        <h3>oops, there are no profiles that match those search Preferences</h3>
+
+    {{else}}
+    <h3>oops, there are no profiles that match those search Preferences</h3>
     {{/each}}
 </div>
